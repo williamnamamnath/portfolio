@@ -15,6 +15,10 @@ const navProjects = () => {
   navigate('/projects'); 
 };
 
+const navAboutMe = () => {
+  navigate('/about'); 
+};
+
 const navExperience = () => {
     navigate('/experience'); 
   };
@@ -35,8 +39,11 @@ const navExperience = () => {
             <li>
                 <MenuItem onClick={navProjects}>My Projects</MenuItem>
               </li>
+            <li>
+                <MenuItem onClick={navAboutMe}>About Me</MenuItem>
+              </li>
               <li>
-                <MenuItem onClick={navExperience}>My Professional Experience</MenuItem>
+                <MenuItem onClick={navExperience}>My Background</MenuItem>
               </li>
               <li>
               <SocialsDiv>

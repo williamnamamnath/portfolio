@@ -1,0 +1,52 @@
+/* Home page */
+@media all and (min-width: 360px) and (max-width: 969px) {
+  .profile-picture {
+    border-radius: 150px !important;
+    height: 250px !important;
+    width: 250px !important;
+  }
+  
+  .tech-stack-icon {
+    font-size: 3.5rem !important;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* AboutMe page */
+@media all and (min-width: 360px) and (max-width: 969px) {
+  .about-picture {
+    height: 350px !important;
+    width: 250px !important;
+  }
+  
+  .about-paragraph {
+    font-size: 1rem !important;
+    margin: 0.2rem !important;
+    padding: 0.7rem !important;
+  }
+}
+
+/* Experience page */
+@media all and (min-width: 360px) and (max-width: 969px) {
+  .experience-title {
+    text-align: center !important;
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Projects page */
+@media all and (min-width: 360px) and (max-width: 969px) {
+  .project-button {
+    font-size: 1rem !important;
+    padding: 1rem 4rem !important;
+    margin: 2rem 0 !important;
+    max-width: 14rem !important;
+  }
+  
+  .projects-title {
+    font-size: 2.5rem !important;
+  }
+}

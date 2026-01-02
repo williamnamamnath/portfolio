@@ -1,16 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Span = styled.span`
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
-  font-size: 50px;
-`
 
 const ErrorPage = () => {
 
@@ -25,7 +17,7 @@ const ErrorPage = () => {
         <Link to="/" style={{color:"black", textDecoration:"none"}}>
         <div className="home-btn">
         <button style={{justifyContent: "center"}}>
-        <Span>Home</Span>
+        <span style={{ fontSize: '50px' }}>Home</span>
         </button>
         </div>
         </Link>

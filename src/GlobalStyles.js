@@ -18,25 +18,10 @@ body {
     }
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    font-size: 75px;
-}
-
 h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-h3 {
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 h4 {
@@ -48,18 +33,6 @@ h4 {
 
 .project-space {
     color: whitesmoke;
-}
-
-.body-space {
-    max-width: 1300px !important;
-    margin: 0 auto;
-    position: relative;
-    overflow-x: hidden;
-
-    @media all and (max-width: 1300px) {
-        padding: 0 1.5rem;
-        
-    }
 }
 
 .mobile-nav {
