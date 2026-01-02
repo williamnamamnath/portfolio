@@ -1,7 +1,7 @@
 # My Portfolio 💼
 
+<img width="946" height="469" alt="home-page" src="https://github.com/user-attachments/assets/a04d485a-0898-42ab-9827-89f2edc00a94" />
 
-![portfolio-main-page](https://github.com/user-attachments/assets/9f08b186-a3d9-431a-b973-d29c76e09fd8)
 
 ## 👋 Hi There! 
 
