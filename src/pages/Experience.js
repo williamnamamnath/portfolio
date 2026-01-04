@@ -12,22 +12,19 @@ const Experience = () => {
 
     return (
         <>
-        <div style={{ margin: '8rem 0' }} />
+        <div style={{ margin: '6rem 0' }} />
         <Container className="py-5">
-            <h1 className="text-center text-white mb-5" style={{ fontFamily: 'Open Sans, sans-serif', fontSize: '3.8rem' }}>
+            <h1 className="text-center text-white mb-5" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                 My Academic and Professional Experience 
-                <br/>
-                🎓💼
             </h1>
             
             <Tab.Container activeKey={key} onSelect={(k) => setKey(k)}>
-                <Row className="justify-content-center mb-4">
+                <Row className="justify-content-center mb-5">
                     <Col lg={8} md={10}>
                         <Nav variant="pills" className="justify-content-center gap-3">
                                     <Nav.Item>
                                         <Nav.Link 
                                             eventKey="education"
-                                            className="my-5"
                                             style={{
                                                 fontSize: '1.2rem',
                                                 padding: '1rem 2.5rem',
@@ -55,7 +52,6 @@ const Experience = () => {
                             <Nav.Item>
                                 <Nav.Link 
                                     eventKey="experience"
-                                    className="my-5"
                                     style={{
                                         fontSize: '1.2rem',
                                         padding: '1rem 2.5rem',
@@ -90,7 +86,7 @@ const Experience = () => {
                         <Tab.Content>
                             <Tab.Pane eventKey="experience">
                                 <Card 
-                                    className="my-4" 
+                                    className="m-4 mt-5" 
                                     style={{ 
                                         backgroundImage: 'linear-gradient(-20deg, #2b5876 0%, #4e4376 100%)',
                                         border: 'none',
@@ -99,32 +95,17 @@ const Experience = () => {
                                         animation: 'fadeIn 0.5s ease-in'
                                     }}
                                 >
-                                    <Card.Body className="p-5 my-3">
+                                    <Card.Body className="p-5 my-3 experience-card-body">
                                         <div className="d-flex align-items-center my-4">
-                                            <div 
-                                                className="me-3" 
-                                                style={{ 
-                                                    width: '60px', 
-                                                    height: '60px', 
-                                                    backgroundImage: 'radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%)',
-                                                    backgroundBlendMode: 'screen', 
-                                                    borderRadius: '50%',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    fontSize: '2rem'
-                                                }}
-                                            >
-                                                💻
-                                            </div>
                                             <div>
                                                 <h3 className="mb-1 text-white" style={{ fontWeight: '700' }}>Freelance Web Developer</h3>
                                                 <p className="mb-0 text-white" style={{ opacity: 0.9 }}>
-                                                    <strong>July 2024 - Present</strong>
+                                                    <p>July 2024 - Present</p>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="text-white" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                        <hr style={{ color: 'whitesmoke' }}/>
+                                        <div className="text-white mt-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
                                             <p className="mb-3">
                                                 Creating a comprehensive website for a subdivision of the medical genetics department at the Montreal University Health Centre
                                             </p>
@@ -140,7 +121,7 @@ const Experience = () => {
 
                             <Tab.Pane eventKey="education">
                                 <Card 
-                                    className="mb-5" 
+                                    className="m-4 mt-5" 
                                     style={{ 
                                         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                                         border: 'none',
@@ -149,38 +130,25 @@ const Experience = () => {
                                         animation: 'fadeIn 0.5s ease-in'
                                     }}
                                 >
-                                    <Card.Body className="p-5 my-3">
+                                    <Card.Body className="p-5 my-3 education-card-body">
                                         <div className="d-flex align-items-center my-4">
-                                            <div 
-                                                className="me-3" 
-                                                style={{ 
-                                                    width: '60px', 
-                                                    height: '60px', 
-                                                    backgroundImage: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)', 
-                                                    borderRadius: '50%',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    fontSize: '2rem'
-                                                }}
-                                            >
-                                                🎓
-                                            </div>
                                             <div>
                                                 <h3 className="mb-1 text-white" style={{ fontWeight: '700' }}>Web Development Certificate</h3>
-                                                <p className="mb-0 text-white" style={{ opacity: 0.9 }}>
+                                                <p className="text-white" style={{ opacity: 0.9 }}>
                                                     <strong>Concordia University Bootcamp</strong> | October 2023 - May 2024
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="text-white" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                        <hr style={{ color: 'whitesmoke' }}/>
+
+                                        <div className="text-white mt-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
                                             <p>Intensive full-stack web development program covering modern technologies and frameworks including the MERN stack, responsive design, and agile development methodologies.</p>
                                         </div>
                                     </Card.Body>
                                 </Card>
 
                                 <Card 
-                                    className="mt-5" 
+                                    className="m-4 mt-5" 
                                     style={{ 
                                         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                                         border: 'none',
@@ -189,32 +157,18 @@ const Experience = () => {
                                         animation: 'fadeIn 0.6s ease-in'
                                     }}
                                 >
-                                    <Card.Body className="p-5">
+                                    <Card.Body className="p-5 my-3 education-card-body">
                                         <div className="d-flex align-items-center my-4">
-                                            <div 
-                                                className="me-3" 
-                                                style={{ 
-                                                    width: '60px', 
-                                                    height: '60px', 
-                                                    backgroundImage: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)', 
-                                                    borderRadius: '50%',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    fontSize: '2rem'
-                                                }}
-                                            >
-                                                📚
-                                            </div>
                                             <div>
-                                                <h3 className="mb-1 text-white" style={{ fontWeight: '700' }}>Bachelor of Education</h3>
-                                                <p className="mb-0 text-white" style={{ opacity: 0.9 }}>
+                                                <h3 className="text-white" style={{ fontWeight: '700' }}>Bachelor of Education</h3>
+                                                <p className="text-white" style={{ opacity: 0.9 }}>
                                                     <strong>McGill University</strong> | August 2017 - April 2021
-                                                    <p className="mb-2">Specialization in Teaching English as a Second Language (TESL)</p>
                                                 </p>
+                                                <p className="mb-2 text-white" style={{ opacity: 0.9 }}>Teaching English as a Second Language (TESL)</p>
                                             </div>
                                         </div>
-                                        <div className="text-white" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                        <hr style={{ color: 'whitesmoke' }}/>
+                                        <div className="text-white mt-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
                                             <p className="mb-0" style={{ opacity: 0.9 }}>Developed strong communication, problem-solving, and organizational skills that translate effectively to collaborative software development environments.</p>
                                         </div>
                                     </Card.Body>
@@ -247,8 +201,10 @@ const Experience = () => {
                     font-size: 1rem !important;
                     padding: 0.8rem 1.5rem !important;
                 }
-                .card-body {
-                    padding: 2rem !important;
+                .experience-card-body,
+                .education-card-body {
+                    padding: 3rem 1.5rem !important;
+                    margin: 1.5rem 0 !important;
                 }
             }
         `}</style>

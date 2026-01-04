@@ -50,11 +50,11 @@ const navProjects = () => {
           </div>
 
           <div className="text-white rounded-5 m-3 p-2" style={{ display: 'inline-block' }}>
-            <h1 className="text-center" style={{ fontFamily: 'Poppins, sans-serif', color: 'whitesmoke' }}>William</h1>
-            <h1 className="text-center" style={{ fontFamily: 'Poppins, sans-serif', color: 'whitesmoke' }}>Nam-Amnath</h1>
+            <h1 className="text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>William</h1>
+            <h1 className="text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>Nam-Amnath</h1>
             <br/>
             <br/>
-            <h3 className="text-center mb-3">Full-Stack Web Developer</h3>
+            <h4 className="text-center mb-3">Full-Stack Web Developer</h4>
             <hr/>
             <div className="d-flex justify-content-center align-items-center gap-4 rounded-5 mb-3 px-5">
               <a 
@@ -110,23 +110,25 @@ const navProjects = () => {
     <br/>
     <br/>
 
-      <div style={{ margin: '8rem 0' }} />
-    <h3 className="text-center text-white">I have experience with the following tech stack:</h3>
+      <div style={{ margin: '8rem 4rem' }} />
+    <h4 className="text-center text-white">I have experience with the following tech stack:</h4>
+
     <div className="d-flex justify-content-center align-items-center">
       <div className="text-white rounded-5 m-3 p-2" style={{ display: 'inline-block' }}>
-        <div className="d-flex justify-content-center align-items-center gap-4 text-dark rounded-5 m-4 p-3">
-          <i className="devicon-html5-plain-wordmark colored" style={{ fontSize: '8rem', backgroundColor: 'transparent', padding: '5px', borderRadius: '10px' }}></i>
-          <i className="devicon-css3-plain-wordmark colored" style={{ fontSize: '8rem', backgroundColor: 'transparent', padding: '5px', borderRadius: '10px' }}></i>
-          <i className="devicon-javascript-plain colored" style={{ fontSize: '8rem', backgroundColor: 'transparent', padding: '5px', borderRadius: '10px' }}></i>
-          <i className="devicon-typescript-plain colored" style={{ fontSize: '8rem', backgroundColor: 'transparent', padding: '5px', borderRadius: '10px' }}></i>
+        <div className="d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4 text-dark rounded-5 m-2 m-md-4 p-2 p-md-3">
+          <i className="devicon-html5-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
+          <i className="devicon-css3-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
+          <i className="devicon-javascript-plain colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
+          <i className="devicon-typescript-plain colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
         </div>
-        <div className="d-flex justify-content-center align-items-center gap-4 text-dark rounded-5 m-4 p-3">
-          <i className="devicon-react-original-wordmark colored" style={{ fontSize: '8rem', backgroundColor: 'transparent', padding: '5px', borderRadius: '10px' }}></i>    
-          <i className="devicon-mongodb-plain-wordmark colored" style={{ fontSize: '8rem', backgroundColor: 'transparent', padding: '5px', borderRadius: '10px' }}></i>
-          <i className="devicon-nodejs-plain-wordmark colored" style={{ fontSize: '8rem', backgroundColor: 'transparent', padding: '5px', borderRadius: '10px' }}></i>
+        <div className="d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4 text-dark rounded-5 m-2 m-md-4 p-2 p-md-3">
+          <i className="devicon-react-original-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>    
+          <i className="devicon-mongodb-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
+          <i className="devicon-nodejs-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
         </div>
       </div>
     </div>
+    
     <br/>
     <br/>
     <br/>
@@ -144,23 +146,21 @@ const navProjects = () => {
     <br/>
     
     <div className="mt-5" />
-    <h3 className="text-center text-white">Want to know about my projects and my background?
+
+    <h4 className="text-center text-white px-4">Want to know about my projects and my background?
       <br/>
       Let's get started.
-    </h3>
-    <div className="d-flex flex-wrap justify-content-center align-items-center gap-4 text-dark rounded-5 mt-4">
+    </h4>
+    <div className="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-4">
       <Button 
         onClick={navProjects}
         style={{
-          fontSize: '1.3rem',
           color: '#fff',
           background: 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)',
-          padding: '2rem 2.2rem',
-          margin: '2rem 0',
           outline: '1.5px solid transparent',
           transition: 'all 0.5s ease'
         }}
-        className="rounded-pill"
+        className="rounded-pill p-3"
         onMouseEnter={(e) => {
           e.target.style.background = 'black';
           e.target.style.outline = '1.5px solid #0046EA';
@@ -170,21 +170,17 @@ const navProjects = () => {
           e.target.style.outline = '1.5px solid transparent';
         }}
       >
-         My Projects 
-      <span style={{ marginLeft: '0.5rem', fontSize: '2rem' }}>→</span>
+         My Projects
       </Button>
       <Button 
         onClick={navExperience}
         style={{
-          fontSize: '1.3rem',
           color: '#fff',
           background: 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)',
-          padding: '2rem 2.2rem',
-          margin: '2rem 0',
           outline: '1.5px solid transparent',
           transition: 'all 0.5s ease'
         }}
-        className="rounded-pill"
+        className="rounded-pill p-3"
         onMouseEnter={(e) => {
           e.target.style.background = 'black';
           e.target.style.outline = '1.5px solid #0046EA';
@@ -195,7 +191,6 @@ const navProjects = () => {
         }}
       >
          My Background 
-      <span style={{ marginLeft: '0.5rem', fontSize: '2rem' }}>→</span>
       </Button>
     </div>
 
