@@ -13,10 +13,10 @@ const Experience = () => {
     return (
         <>
         <div style={{ margin: '6rem 0' }} />
+        <h1 className="text-center text-white mb-5" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+            My Academic and Professional Experience 
+        </h1>
         <Container className="py-5">
-            <h1 className="text-center text-white mb-5" style={{ fontFamily: 'Open Sans, sans-serif' }}>
-                My Academic and Professional Experience 
-            </h1>
             
             <Tab.Container activeKey={key} onSelect={(k) => setKey(k)}>
                 <Row className="justify-content-center mb-5">
@@ -26,7 +26,6 @@ const Experience = () => {
                                         <Nav.Link 
                                             eventKey="education"
                                             style={{
-                                                fontSize: '1.2rem',
                                                 padding: '1rem 2.5rem',
                                                 borderRadius: '50px',
                                                 background: key === 'education' ? 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)' : 'transparent',
@@ -53,7 +52,6 @@ const Experience = () => {
                                 <Nav.Link 
                                     eventKey="experience"
                                     style={{
-                                        fontSize: '1.2rem',
                                         padding: '1rem 2.5rem',
                                         borderRadius: '50px',
                                         background: key === 'experience' ? 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)' : 'transparent',
@@ -105,7 +103,7 @@ const Experience = () => {
                                             </div>
                                         </div>
                                         <hr style={{ color: 'whitesmoke' }}/>
-                                        <div className="text-white mt-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                        <div className="text-white mt-5" style={{ lineHeight: '1.8' }}>
                                             <p className="mb-3">
                                                 Creating a comprehensive website for a subdivision of the medical genetics department at the Montreal University Health Centre
                                             </p>
@@ -141,7 +139,7 @@ const Experience = () => {
                                         </div>
                                         <hr style={{ color: 'whitesmoke' }}/>
 
-                                        <div className="text-white mt-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                        <div className="text-white mt-5" style={{ lineHeight: '1.8' }}>
                                             <p>Intensive full-stack web development program covering modern technologies and frameworks including the MERN stack, responsive design, and agile development methodologies.</p>
                                         </div>
                                     </Card.Body>

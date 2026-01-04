@@ -8,7 +8,6 @@ import { MdEmail } from "react-icons/md";
 
 import backToTop from "../images/arrow-up.png";
 import picture from "../images/profile-picture.jpg";
-import banffPhoto from "../images/wnam-amnath.JPG";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,6 +26,10 @@ const navExperience = () => {
 
 const navProjects = () => {
   navigate('/projects'); 
+};
+
+const navAboutMe = () => {
+  navigate('/about'); 
 };
 
   return (
@@ -111,7 +114,7 @@ const navProjects = () => {
     <br/>
 
       <div style={{ margin: '8rem 4rem' }} />
-    <h4 className="text-center text-white">I have experience with the following tech stack:</h4>
+    <h4 className="text-center text-white m-3 p-2">I have experience with the following tech stack:</h4>
 
     <div className="d-flex justify-content-center align-items-center">
       <div className="text-white rounded-5 m-3 p-2" style={{ display: 'inline-block' }}>
@@ -147,11 +150,31 @@ const navProjects = () => {
     
     <div className="mt-5" />
 
-    <h4 className="text-center text-white px-4">Want to know about my projects and my background?
+    <h4 className="text-center text-white px-4">Want to know more about me?
       <br/>
       Let's get started.
     </h4>
     <div className="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-4">
+      <Button 
+        onClick={navAboutMe}
+        style={{
+          color: '#fff',
+          background: 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)',
+          outline: '1.5px solid transparent',
+          transition: 'all 0.5s ease'
+        }}
+        className="rounded-pill p-3"
+        onMouseEnter={(e) => {
+          e.target.style.background = 'black';
+          e.target.style.outline = '1.5px solid #0046EA';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.background = 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)';
+          e.target.style.outline = '1.5px solid transparent';
+        }}
+      >
+         About Me
+      </Button>
       <Button 
         onClick={navProjects}
         style={{
@@ -202,44 +225,7 @@ const navProjects = () => {
     <br/>
     <br/>
     <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
 
-    <div className="d-flex align-items-center justify-content-center">
-            <img 
-                src={banffPhoto} 
-                alt="William Nam-Amnath"
-                className="rounded shadow"
-                style={{
-                  boxShadow: '0 2px 20px 0 #efd6ac',
-                  borderRadius: '10px',
-                  height: '500px',
-                  width: '300px',
-                  objectFit: 'cover'
-                }}
-            />
-            </div>
-            <br/>
-            <p className="text-center text-white fs-5 m-2 p-4 lh-lg" style={{ fontSize: '1.2rem', margin: '0.6rem', padding: '1.5rem', lineHeight: '1.7' }}>
-            <h2 style={{fontStyle: "italic", color: "white"}}>👋 Hi there! </h2>
-            My name is <span style={{ color: '#3672FF'}}>William Nam-Amnath</span> and I am a full-stack web developer based in Montreal, Canada.
-            <div className="my-3"/>
-            Click <a href='/about' style={{ color: 'white', textDecoration: 'underline', cursor:'pointer' }}>here</a> to learn more about me.
-            </p>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
     <div className="top-btn">
     <a href="/"><img src={backToTop} alt="arrow up"/></a>
     </div>
