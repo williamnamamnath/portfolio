@@ -115,11 +115,7 @@ const MovieNight = () => {
                                 </li>
                                 <li className="mb-3">
                                     <span className="me-2">✓</span>
-                                    Created the customer service pages to look as authentic to a real brand as possible
-                                </li>
-                                <li className="mb-3">
-                                    <span className="me-2">✓</span>
-                                    Implemented authentication and authorization features to ensure secure access to family accounts and data privacy
+                                    Implemented authentication and authorization features to ensure secure access to user accounts. 
                                 </li>
                             </ul>
                         </Card.Body>
