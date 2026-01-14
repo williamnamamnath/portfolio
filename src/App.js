@@ -5,9 +5,9 @@ import AboutMe from "./pages/AboutMe";
 import ProjectsPage from "./pages/ProjectsPage";
 import CheckIt from "./projects/Checkit";
 import NFIB from "./projects/NFIB";
-import Nutrissence from "./projects/Nutrissence";
 import Emporium from "./projects/Emporium";
 import Experience from "./pages/Experience";
+import MovieNight from "./projects/MovieNight";
 import ErrorPage from "./pages/ErrorPage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -30,8 +30,8 @@ const App = () => {
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/checkit" element={<CheckIt />} />
                 <Route path="/nfib" element={<NFIB />} />
-                <Route path="/nutrissence" element={<Nutrissence />} />
                 <Route path="/emporium" element={<Emporium />} />
+                <Route path="/movie-night" element={<MovieNight />} />
                 <Route path="/*" element={<ErrorPage />} />
             </Routes>
             <Footer />

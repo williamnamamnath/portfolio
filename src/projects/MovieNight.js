@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import projectNFIB from "../images/NFIB-home-page.JPG";
-import backToTop from "../images/arrow-up.png"
+import movieNightHome from "../images/hero-section-image.png";
+import backToTop from "../images/arrow-up.png";
 
-const NFIB = () => {
+const MovieNight = () => {
 
   useEffect(() => {
-    document.title = "Project NFIB"
+    document.title = "Movie Night"
 }, []);
 
     return (
@@ -18,14 +18,14 @@ const NFIB = () => {
             <Row className="mb-5">
                 <Col>
                     <h1 
-                        className="text-center text-white mb-3" 
+                        className="text-center text-white mb-4" 
                         style={{ 
                             fontFamily: 'Open Sans, sans-serif',
                             fontSize: 'clamp(2.5rem, 5vw, 3.8rem)'
                         }}
                     >
                         <a 
-                            href="https://github.com/williamnamamnath/project-nfib" 
+                            href="https://github.com/williamnamamnath/project-GROUP-e-commerce" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="text-white text-decoration-none"
@@ -35,28 +35,27 @@ const NFIB = () => {
                             onMouseEnter={(e) => e.target.style.color = '#3672FF'}
                             onMouseLeave={(e) => e.target.style.color = 'white'}
                         >
-                            Project NFIB
+                            Movie Night
                         </a>
                     </h1>
-                    <h3 className="text-center text-white-50 mb-4">(work in progress)</h3>
                     <div className="text-center mb-4">
-                        <Badge bg="primary" className="me-2 fs-6 px-3 py-2">Freelance Project</Badge>
-                        <Badge bg="info" className="fs-6 px-3 py-2">Medical</Badge>
+                        <Badge bg="primary" className="me-2 fs-6 px-3 py-2">Full-Stack Project</Badge>
+                        <Badge bg="info" className="fs-6 px-3 py-2">MERN Stack</Badge>
                     </div>
                 </Col>
             </Row>
 
-            {/* <Row className="mb-5">
+            <Row className="mb-5">
                 <Col lg={10} className="mx-auto">
                     <a 
-                        href="https://github.com/williamnamamnath/project-nfib" 
+                        href="https://github.com/williamnamamnath/project-GROUP-e-commerce" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="d-block"
                     >
                         <img 
-                            src={projectNFIB} 
-                            alt="NFIB Project Application" 
+                            src={movieNightHome} 
+                            alt="Movie Night Application" 
                             className="img-fluid rounded-4 w-100"
                             style={{ 
                                 boxShadow: '0 4px 30px rgba(0, 70, 234, 0.4)',
@@ -66,7 +65,7 @@ const NFIB = () => {
                         />
                     </a>
                 </Col>
-            </Row> */}
+            </Row>
 
             <Row className="mb-5">
                 <Col lg={10} className="mx-auto">
@@ -80,13 +79,13 @@ const NFIB = () => {
                     >
                         <Card.Body className="p-4 p-md-5">
                             <h2 className="text-white text-center mb-4 pb-3 border-bottom border-primary">
-                                What is Project NFIB?
+                                What is Movie Night?
                             </h2>
                             <p className="text-white fs-5 mb-4 lh-lg">
-                                Project NFIB (neurofibromatosis) is a freelance project that was offered to me by one of the medical geneticists that I work with at the Montreal University Health Centre (MUHC).
+                                Movie Night is a full-stack project built powered by the MERN stack. The purpose of this website is for users of any age to browse through movies and TV shows and get in-depth details in regards to their favorite titles. Users can create an account to save their favorite movies and TV shows to their watchlist for easy access later on.
                             </p>
                             <p className="text-white fs-5 lh-lg">
-                                With this website, visitors will be able to learn more about the NFIB clinic at the MUHC and how to refer patients or family members to the clinic. The purpose of this website is meant to be informational for the public.
+                                Watching movies with my friends during my free time is one of my favorite hobbies, so I wanted to create a platform that is accessible and easy to use, a platform that I would use myself.
                             </p>
                         </Card.Body>
                     </Card>
@@ -108,7 +107,19 @@ const NFIB = () => {
                             <ul className="text-white fs-5 lh-lg" style={{ listStyleType: 'none', paddingLeft: 0 }}>
                                 <li className="mb-3">
                                     <span className="me-2">✓</span>
-                                    Frontend-based website with the goal of illustrating the NFIB team at the MUHC and its clinical services.
+                                    Designed the frontend and orchestrated the backend for a full-stack application.
+                                </li>
+                                <li className="mb-3">
+                                    <span className="me-2">✓</span>
+                                    Data is supplemented by OMDb API, a movie database API that provides access to  narrative media information.
+                                </li>
+                                <li className="mb-3">
+                                    <span className="me-2">✓</span>
+                                    Created the customer service pages to look as authentic to a real brand as possible
+                                </li>
+                                <li className="mb-3">
+                                    <span className="me-2">✓</span>
+                                    Implemented authentication and authorization features to ensure secure access to family accounts and data privacy
                                 </li>
                             </ul>
                         </Card.Body>
@@ -145,7 +156,25 @@ const NFIB = () => {
                                 </Col>
                                 <Col xs={6} md={4}>
                                     <i 
+                                        className="devicon-javascript-plain colored" 
+                                        style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
+                                    ></i>
+                                </Col>
+                                <Col xs={6} md={4}>
+                                    <i 
                                         className="devicon-react-original-wordmark colored" 
+                                        style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
+                                    ></i>
+                                </Col>
+                                <Col xs={6} md={4}>
+                                    <i 
+                                        className="devicon-mongodb-plain-wordmark colored" 
+                                        style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
+                                    ></i>
+                                </Col>
+                                <Col xs={6} md={4}>
+                                    <i 
+                                        className="devicon-nodejs-plain-wordmark colored" 
                                         style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
                                     ></i>
                                 </Col>
@@ -157,7 +186,7 @@ const NFIB = () => {
 
             <Row>
                 <Col className="text-center">
-                    <a href="/nfib">
+                    <a href="/emporium">
                         <img 
                             src={backToTop} 
                             alt="Back to top" 
@@ -177,4 +206,4 @@ const NFIB = () => {
     )
 }
 
-export default NFIB;
+export default MovieNight;
