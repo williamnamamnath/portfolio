@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -10,6 +11,7 @@ import backToTop from "../images/arrow-up.png";
 import picture from "../images/profile-picture.jpg";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../custom-styles.css';
 
 
 const Home = () => {
@@ -20,12 +22,24 @@ const Home = () => {
 
 const navigate = useNavigate();
 
+    const handleClickNFIB = () => {
+        navigate('/nfib'); 
+      };
+
+      const handleClickEmporium = () => {
+        navigate('/emporium'); 
+      };
+
+      const handleClickCheckIt = () => {
+        navigate('/checkit'); 
+      };
+      
+      const handleClickMovieNight = () => {
+        navigate('/movie-night'); 
+      };
+
 const navExperience = () => {
   navigate('/experience'); 
-};
-
-const navProjects = () => {
-  navigate('/projects'); 
 };
 
 const navAboutMe = () => {
@@ -33,11 +47,11 @@ const navAboutMe = () => {
 };
 
   return (
-    <div className="">
-      <div style={{ margin: '8rem 0' }}>
+    <>
+      <div className="hero-section">
         <div className="d-flex justify-content-center align-items-center flex-wrap"> 
 
-          <div className="d-inline-block p-4">
+          <div className="d-inline-block p-4 fade-in-left delay-0">
             <img 
               src={picture} 
               alt="William Nam-Amnath" 
@@ -52,12 +66,11 @@ const navAboutMe = () => {
             />
           </div>
 
-          <div className="text-white rounded-5 m-3 p-2" style={{ display: 'inline-block' }}>
-            <h1 className="text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>William</h1>
-            <h1 className="text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>Nam-Amnath</h1>
-            <br/>
-            <br/>
-            <h4 className="text-center mb-3">Full-Stack Web Developer</h4>
+          <div className="text-white rounded-5 m-3 p-2 fade-in-right delay-1" style={{ display: 'inline-block' }}>
+            <h1 className="text-center home-name-line" style={{ fontFamily: 'Poppins, sans-serif' }}>William</h1>
+            <h1 className="text-center home-name-line" style={{ fontFamily: 'Poppins, sans-serif' }}>Nam-Amnath</h1>
+            <div style={{ height: '0.75rem' }} />
+            <h4 className="text-center mb-3 hero-subtitle">Full-Stack Web Developer</h4>
             <hr/>
             <div className="d-flex justify-content-center align-items-center gap-4 rounded-5 mb-3 px-5">
               <a 
@@ -98,139 +111,73 @@ const navAboutMe = () => {
 
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
+      <div className="container my-5">
+        {/* Stack carousel above the buttons vertically */}
+        <div className="mb-4">
+          <div className="project-card p-3 fade-up delay-2">
+            <h4 className="text-white m-3 p-2">My Projects</h4>
+            <Carousel
+              interval={null}
+              indicators={true}
+              controls={true}
+              className="project-carousel"
+            >
+              <Carousel.Item>
+                <div className="project-tile d-flex justify-content-center align-items-center">
+                  <div onClick={handleClickMovieNight} className="project-content text-center">
+                    <h1 className="mb-4">🌟 Movie Night 🌟</h1>
+                    <h5>Full-Stack Project</h5>
+                  </div>
+                </div>
+              </Carousel.Item>
 
-      <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+              <Carousel.Item>
+                <div className="project-tile d-flex justify-content-center align-items-center">
+                  <div onClick={handleClickEmporium} className="project-content text-center">
+                    <h1 className="mb-4">🌟 E-Wear Emporium 🌟</h1>
+                    <h5>Team Project</h5>
+                  </div>
+                </div>
+              </Carousel.Item>
 
-      <div style={{ margin: '8rem 4rem' }} />
-    <h4 className="text-center text-white m-3 p-2">I have experience with the following tech stack:</h4>
+              <Carousel.Item>
+                <div className="project-tile d-flex justify-content-center align-items-center">
+                  <div onClick={handleClickCheckIt} className="project-content text-center">
+                    <h1 className="mb-4">🌟 CheckIt 🌟</h1>
+                    <h5>Beginner Typescript Project</h5>
+                  </div>
+                </div>
+              </Carousel.Item>
 
-    <div className="d-flex justify-content-center align-items-center">
-      <div className="text-white rounded-5 m-3 p-2" style={{ display: 'inline-block' }}>
-        <div className="d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4 text-dark rounded-5 m-2 m-md-4 p-2 p-md-3">
-          <i className="devicon-html5-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
-          <i className="devicon-css3-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
-          <i className="devicon-javascript-plain colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
-          <i className="devicon-typescript-plain colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
+              <Carousel.Item>
+                <div className="project-tile d-flex justify-content-center align-items-center">
+                  <div onClick={handleClickNFIB} className="project-content text-center">
+                    <h1 className="mb-4">🌟 NFIB 🌟</h1>
+                    <h5>Freelance Project</h5>
+                  </div>
+                </div>
+              </Carousel.Item>
+
+            </Carousel>
+          </div>
         </div>
-        <div className="d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4 text-dark rounded-5 m-2 m-md-4 p-2 p-md-3">
-          <i className="devicon-react-original-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>    
-          <i className="devicon-mongodb-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
-          <i className="devicon-nodejs-plain-wordmark colored" style={{ fontSize: '5rem', backgroundColor: 'transparent', padding: '10px', borderRadius: '10px' }}></i>
+
+        <div>
+          <aside className="sidebar-card p-4 text-center text-white fade-up delay-3">
+            <h4>Want to know more about me?<br/>Let's get started.</h4>
+            <div className="d-grid gap-3 mt-4">
+              <Button onClick={navAboutMe} className="rounded-pill p-3 w-100 cta-btn">About Me</Button>
+              <Button onClick={navExperience} className="rounded-pill p-3 w-100 cta-btn">My Background</Button>
+            </div>
+          </aside>
         </div>
       </div>
-    </div>
-    
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    
-    <div className="mt-5" />
-
-    <h4 className="text-center text-white px-4">Want to know more about me?
-      <br/>
-      Let's get started.
-    </h4>
-    <div className="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-4">
-      <Button 
-        onClick={navAboutMe}
-        style={{
-          color: '#fff',
-          background: 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)',
-          outline: '1.5px solid transparent',
-          transition: 'all 0.5s ease'
-        }}
-        className="rounded-pill p-3"
-        onMouseEnter={(e) => {
-          e.target.style.background = 'black';
-          e.target.style.outline = '1.5px solid #0046EA';
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.background = 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)';
-          e.target.style.outline = '1.5px solid transparent';
-        }}
-      >
-         About Me
-      </Button>
-      <Button 
-        onClick={navProjects}
-        style={{
-          color: '#fff',
-          background: 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)',
-          outline: '1.5px solid transparent',
-          transition: 'all 0.5s ease'
-        }}
-        className="rounded-pill p-3"
-        onMouseEnter={(e) => {
-          e.target.style.background = 'black';
-          e.target.style.outline = '1.5px solid #0046EA';
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.background = 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)';
-          e.target.style.outline = '1.5px solid transparent';
-        }}
-      >
-         My Projects
-      </Button>
-      <Button 
-        onClick={navExperience}
-        style={{
-          color: '#fff',
-          background: 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)',
-          outline: '1.5px solid transparent',
-          transition: 'all 0.5s ease'
-        }}
-        className="rounded-pill p-3"
-        onMouseEnter={(e) => {
-          e.target.style.background = 'black';
-          e.target.style.outline = '1.5px solid #0046EA';
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.background = 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)';
-          e.target.style.outline = '1.5px solid transparent';
-        }}
-      >
-         My Background 
-      </Button>
-    </div>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <div className="top-btn">
-    <a href="/"><img src={backToTop} alt="arrow up"/></a>
-    </div>
-    <div style={{ margin: '8rem 0' }} />
-    </div>
+      <div className="top-btn">
+        <a href="/"><img src={backToTop} alt="arrow up"/></a>
+      </div>
+      <div style={{ margin: '6rem 0' }} />
+    </>
   );
 }
 

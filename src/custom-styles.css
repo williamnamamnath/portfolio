@@ -50,3 +50,136 @@
     font-size: 2.5rem !important;
   }
 }
+
+/* Home page styles (project card, sidebar, carousel tweaks) */
+:root{
+  --primary-1: #3672FF;
+  --primary-2: #0046EA;
+  --glass-bg: rgba(255,255,255,0.03);
+  --card-radius: 12px;
+  --card-shadow: 0 8px 30px rgba(0,70,234,0.12);
+}
+
+/* Entrance animations */
+.fade-up{ opacity: 0; transform: translateY(14px); animation: fadeUp 2000ms forwards; }
+.fade-in-left{ opacity: 0; transform: translateX(-18px); animation: fadeLeft 2000ms forwards; }
+.fade-in-right{ opacity: 0; transform: translateX(18px); animation: fadeRight 2000ms forwards; }
+
+.delay-0{ animation-delay: 120ms; }
+.delay-1{ animation-delay: 220ms; }
+.delay-2{ animation-delay: 320ms; }
+.delay-3{ animation-delay: 420ms; }
+
+@keyframes fadeUp{ to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeLeft{ to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeRight{ to { opacity: 1; transform: translateX(0); } }
+
+/* Typography scale tweaks for Home headings */
+.home-name-line{ font-size: 2.6rem; line-height: 1; }
+.hero-subtitle{ font-size: 1.05rem; letter-spacing: 0.4px; opacity: 0.95; }
+
+@media (min-width: 992px){
+  .home-name-line{ font-size: 3.4rem; }
+  .hero-subtitle{ font-size: 1.1rem; }
+}
+
+
+.project-card{
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.12));
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+
+.project-carousel .carousel-control-prev-icon,
+.project-carousel .carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+.project-tile{
+  min-height: 360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Hero section spacing: keep profile section visible on first load */
+.hero-section{
+  min-height: 100vh; /* make hero occupy full viewport so rest is below the fold on load */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px){
+  .hero-section{ padding-top: 4rem; padding-bottom: 4rem; }
+}
+
+@media (min-width: 1200px){
+  .hero-section{ padding-top: 5rem; padding-bottom: 5rem; }
+}
+
+.project-content{
+  width: 100%;
+  max-width: 560px;
+  padding: 2.25rem 1.75rem;
+  border-radius: 14px;
+  color:#fff;
+  background: linear-gradient(90deg, var(--primary-1), var(--primary-2));
+  box-shadow: 0 10px 40px rgba(0,70,234,0.18);
+  transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s cubic-bezier(.2,.8,.2,1), background .28s ease;
+  cursor: pointer;
+}
+
+.project-content:hover{
+  transform: translateY(-10px) scale(1.02);
+  background: linear-gradient(90deg, rgba(0,0,0,0.88), rgba(0,0,0,0.98));
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+
+.sidebar-card{
+  background: var(--glass-bg);
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(0,70,234,0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  color: #fff;
+}
+
+.cta-btn{
+  display: inline-block;
+  padding: .85rem 1rem;
+  border-radius: 999px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary-1), var(--primary-2));
+  transition: transform .18s ease, box-shadow .18s ease;
+  font-weight: 600;
+}
+
+/* Constrain button width inside the sidebar and center them */
+.sidebar-card .cta-btn{ max-width: 260px; margin: 0 auto; width: 100%; }
+
+.cta-btn:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,70,234,0.22);
+  background: #000;
+}
+
+@media (max-width: 767px){
+  .project-content{ padding: 2rem; }
+  .project-tile{ min-height: 260px; }
+}
+
+/* Overlap: place carousel visually on top of the sidebar on larger screens */
+@media (min-width: 768px) {
+  /* ensure vertical stacking keeps spacing on larger screens */
+  .project-card{ transform: none; z-index: auto; box-shadow: var(--card-shadow); }
+  .sidebar-card{ margin-left: 0; padding-top: 1rem; }
+  .project-tile{ min-height: 360px; }
+}
