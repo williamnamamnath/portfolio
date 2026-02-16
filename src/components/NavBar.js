@@ -38,7 +38,7 @@ const navExperience = () => {
 
         <Nav>
             <NavContent>
-            <Social href="/"><Img src={name} alt="website logo"/></Social>
+            <Social href="/" aria-label="Homepage"><Img src={name} alt="website logo"/></Social>
             <Ul>
               <Li>
                 <MenuItem onClick={navProjects}>My Projects</MenuItem>
@@ -57,8 +57,8 @@ const navExperience = () => {
                 </SocialsDiv>
               </Li>
             </Ul>
-            <Button onClick={toggleMenu}>
-                <span class={"material-symbols-outlined"} style={{fontSize: "1.8rem"}}>
+            <Button onClick={toggleMenu} aria-expanded={menuClicked} aria-controls="mobile-navigation" aria-label={menuClicked ? "Close menu" : "Open menu"}>
+                <span className={"material-symbols-outlined"} style={{fontSize: "1.8rem"}}>
                     {menuClicked ? "Close" : "Menu"}
                 </span>
             </Button>
@@ -108,12 +108,19 @@ const Li = styled.li`
     margin: 0 1.5rem;
 `
 
-const MenuItem = styled.a`
+const MenuItem = styled.button`
     text-decoration: none;
     font-size: 1.1rem;
     color: white;
     position: relative;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    display: inline-block;
+    text-align: left;
+    line-height: 1;
 
     &:before {
         content: "";

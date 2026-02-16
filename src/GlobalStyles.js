@@ -76,6 +76,16 @@ h4 {
     border-radius: 20px;
 }
 
+/* Focus-visible styles for keyboard users */
+:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 3px solid #3672FF;
+    outline-offset: 2px;
+}
+
 .top-btn img {
     height: 2rem;
 }

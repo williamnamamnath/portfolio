@@ -26,15 +26,15 @@ const navExperience = () => {
 
     return (
         <>
-        <div className={`mobile-nav ${isOpen ? "active" : ""}`} onClick={toggleMenu}>
+        <div id="mobile-navigation" className={`mobile-nav ${isOpen ? "active" : ""}`}>
             <NavContainer>
-                <CloseMenu>Welcome to my portfolio!</CloseMenu>
+                <CloseMenu role="heading">Welcome to my portfolio!</CloseMenu>
                 <hr/>
                 <br/>
 
             <ul>
             <li>
-                <MenuItem href="/">Home</MenuItem>
+                <MenuItem as="a" href="/">Home</MenuItem>
               </li>
             <li>
                 <MenuItem onClick={navProjects}>My Projects</MenuItem>
@@ -47,9 +47,9 @@ const navExperience = () => {
               </li>
               <li>
               <SocialsDiv>
-                <SocialLogo href="https://github.com/williamnamamnath" target="_blank" rel="noopener noreferrer"><FaGithub /></SocialLogo>
-                <SocialLogo href="https://www.linkedin.com/in/william-nam-amnath/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></SocialLogo>
-                <SocialLogo href="mailto:william.nam-amnath@mail.mcgill.ca" target="_blank" rel="noopener noreferrer"><MdEmail /></SocialLogo>
+                <SocialLogo href="https://github.com/williamnamamnath" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></SocialLogo>
+                <SocialLogo href="https://www.linkedin.com/in/william-nam-amnath/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></SocialLogo>
+                <SocialLogo href="mailto:william.nam-amnath@mail.mcgill.ca" target="_blank" rel="noopener noreferrer" aria-label="Email"><MdEmail /></SocialLogo>
                 </SocialsDiv>
               </li>
             </ul>
