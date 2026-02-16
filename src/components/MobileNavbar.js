@@ -26,9 +26,9 @@ const navExperience = () => {
 
     return (
         <>
-        <div id="mobile-navigation" className={`mobile-nav ${isOpen ? "active" : ""}`}>
-            <NavContainer>
-                <CloseMenu role="heading">Welcome to my portfolio!</CloseMenu>
+        <div id="mobile-navigation" className={`mobile-nav ${isOpen ? "active" : ""}`} onClick={(e) => { if (e.target === e.currentTarget) toggleMenu(); }}>
+            <NavContainer onClick={(e) => e.stopPropagation()}>
+                <CloseMenu role="heading" onClick={toggleMenu} aria-label="Close menu">Welcome to my portfolio!</CloseMenu>
                 <hr/>
                 <br/>
 
@@ -37,13 +37,13 @@ const navExperience = () => {
                 <MenuItem as="a" href="/">Home</MenuItem>
               </li>
             <li>
-                <MenuItem onClick={navProjects}>My Projects</MenuItem>
+                <MenuItem as="button" onClick={navProjects}>My Projects</MenuItem>
               </li>
             <li>
-                <MenuItem onClick={navAboutMe}>About Me</MenuItem>
+                <MenuItem as="button" onClick={navAboutMe}>About Me</MenuItem>
               </li>
               <li>
-                <MenuItem onClick={navExperience}>My Background</MenuItem>
+                <MenuItem as="button" onClick={navExperience}>My Background</MenuItem>
               </li>
               <li>
               <SocialsDiv>
