@@ -37,13 +37,13 @@ const navExperience = () => {
                 <MenuItem as="a" href="/">Home</MenuItem>
               </li>
             <li>
-                <MenuItem as="button" onClick={navProjects}>My Projects</MenuItem>
+                <MenuItem as="a" onClick={navProjects}>My Projects</MenuItem>
               </li>
             <li>
-                <MenuItem as="button" onClick={navAboutMe}>About Me</MenuItem>
+                <MenuItem as="a" onClick={navAboutMe}>About Me</MenuItem>
               </li>
               <li>
-                <MenuItem as="button" onClick={navExperience}>My Background</MenuItem>
+                <MenuItem as="a" onClick={navExperience}>My Background</MenuItem>
               </li>
               <li>
               <SocialsDiv>
