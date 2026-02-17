@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import styled from "styled-components";
 import MobileNavbar from "./MobileNavbar";
+import ThemeToggleComponent from './ThemeToggleComponent';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -57,11 +58,14 @@ const navExperience = () => {
                 </SocialsDiv>
               </Li>
             </Ul>
-            <Button onClick={toggleMenu} aria-expanded={menuClicked} aria-controls="mobile-navigation" aria-label={menuClicked ? "Close menu" : "Open menu"}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <ThemeToggleComponent />
+              <Button onClick={toggleMenu} aria-expanded={menuClicked} aria-controls="mobile-navigation" aria-label={menuClicked ? "Close menu" : "Open menu"}>
                 <span className={"material-symbols-outlined"} style={{fontSize: "1.8rem"}}>
                     {menuClicked ? "Close" : "Menu"}
                 </span>
-            </Button>
+              </Button>
+            </div>
             </NavContent>
         </Nav>
         </>
