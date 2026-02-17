@@ -9,7 +9,7 @@ const AboutMe = () => {
         <h1 className="text-center text-white" style={{ fontFamily: 'Open Sans, sans-serif', fontSize: '3.5rem' }}>William Nam-Amnath</h1>
         <br/>
         <p className="text-center text-white m-2 p-4 lh-lg rounded">
-        I am a full-stack web developer based in Montreal, Canada and I specialize in building responsive and user-friendly web applications with the MERN stack. The frontend interests me very much since it allows me to display my creativity and think deeper in order to create user interfaces that will satisfy the users' needs.
+        I am a full-stack web developer based in Montreal, Canada and I specialize in building responsive and user-friendly web applications with the MERN stack. I working on full-stack projects.
         </p>
 
 

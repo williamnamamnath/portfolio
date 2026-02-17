@@ -112,6 +112,16 @@ const navAboutMe = () => {
         </div>
       </div>
       <div className="container my-5">
+        <div>
+          <aside className="sidebar-card p-4 text-center text-white fade-up delay-3">
+            <h4>Want to know more about me?<br/>Let's get started.</h4>
+            <div className="d-grid gap-3 mt-4">
+              <Button onClick={navAboutMe} className="rounded-pill p-3 w-100 cta-btn">About Me</Button>
+              <Button onClick={navExperience} className="rounded-pill p-3 w-100 cta-btn">My Background</Button>
+            </div>
+          </aside>
+        </div>
+        
         {/* Stack carousel above the buttons vertically */}
         <div className="mb-4">
           <div className="project-card p-3 fade-up delay-2">
@@ -162,19 +172,16 @@ const navAboutMe = () => {
           </div>
         </div>
 
-        <div>
-          <aside className="sidebar-card p-4 text-center text-white fade-up delay-3">
-            <h4>Want to know more about me?<br/>Let's get started.</h4>
-            <div className="d-grid gap-3 mt-4">
-              <Button onClick={navAboutMe} className="rounded-pill p-3 w-100 cta-btn">About Me</Button>
-              <Button onClick={navExperience} className="rounded-pill p-3 w-100 cta-btn">My Background</Button>
-            </div>
-          </aside>
-        </div>
+        
       </div>
 
       <div className="top-btn">
         <a href="/"><img src={backToTop} alt="arrow up"/></a>
+      </div>
+      {/* Theme toggle button placed next to top button */}
+      <div style={{ position: 'fixed', bottom: '5rem', right: '4.5rem' }}>
+        {/* The ThemeToggle component will be rendered by index.js globally to avoid prop drilling */}
+        <div id="theme-toggle-root" />
       </div>
       <div style={{ margin: '6rem 0' }} />
     </>
