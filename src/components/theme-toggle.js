@@ -23,3 +23,8 @@ export function mountThemeToggleFallback() {
   });
   root.appendChild(btn);
 }
+
+// Provide CommonJS export for environments that use require()
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports.mountThemeToggleFallback = mountThemeToggleFallback;
+}

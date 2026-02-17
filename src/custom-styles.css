@@ -181,5 +181,30 @@
   /* ensure vertical stacking keeps spacing on larger screens */
   .project-card{ transform: none; z-index: auto; box-shadow: var(--card-shadow); }
   .sidebar-card{ margin-left: 0; padding-top: 1rem; }
-  .project-tile{ min-height: 360px; }
+.project-tile{ min-height: 360px; }
+}
+
+/* Theme toggle styling (mirrors the top-btn) */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  background: var(--sidebar-bg, rgba(0,0,0,0.06));
+  color: var(--text-color);
+  border: none;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.theme-toggle:focus {
+  outline: 3px solid #3672FF;
+  outline-offset: 2px;
 }
