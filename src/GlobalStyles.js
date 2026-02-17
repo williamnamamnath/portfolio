@@ -27,7 +27,7 @@ body{
     }
 }
 
-/* Light theme override: add `light-mode` class to body to switch */
+
 body.light-mode{
     --bg: radial-gradient(circle, #f8fafc, #eef2ff);
     --text-color: #0b1220;

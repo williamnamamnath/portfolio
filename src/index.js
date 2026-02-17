@@ -9,26 +9,7 @@ try { ThemeToggle = require('./components/ThemeToggle').default; } catch (e) { T
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-// Mount a floating ThemeToggle into a small portal container so it's available on all pages
-const container = document.getElementById('theme-toggle-root');
-if (container) {
-  if (ThemeToggle) {
-    try {
-      const React = require('react');
-      const ReactDOM = require('react-dom');
-      ReactDOM.createRoot(container).render(React.createElement(ThemeToggle));
-    } catch (e) {
-      // ignore
-    }
-  } else {
-    // render a tiny fallback button if the component isn't available
-    try {
-      const { mountThemeToggleFallback } = require('./components/theme-toggle');
-      mountThemeToggleFallback();
-    } catch (e) {
-      // missing fallback too — ignore
-    }
-  }
-}
+// If Home included a portal container, the ThemeToggle would be mounted there;
+// instead we place the ThemeToggle directly in the nav so we cleanly show it everywhere.
 
 

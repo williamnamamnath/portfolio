@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import ThemeToggle from './ThemeToggle';
 
 
 const MobileNavbar = ({ isOpen, toggleMenu }) => {
@@ -46,11 +47,16 @@ const navExperience = () => {
                 <MenuItem as="a" onClick={navExperience}>My Background</MenuItem>
               </li>
               <li>
-              <SocialsDiv>
+               <SocialsDiv>
                 <SocialLogo href="https://github.com/williamnamamnath" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></SocialLogo>
                 <SocialLogo href="https://www.linkedin.com/in/william-nam-amnath/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></SocialLogo>
                 <SocialLogo href="mailto:william.nam-amnath@mail.mcgill.ca" target="_blank" rel="noopener noreferrer" aria-label="Email"><MdEmail /></SocialLogo>
                 </SocialsDiv>
+              </li>
+              <li>
+                <div style={{ marginTop: '1.25rem' }}>
+                  <ThemeToggle />
+                </div>
               </li>
             </ul>
             </NavContainer>
