@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ThemeToggleComponent';
 
 
 const MobileNavbar = ({ isOpen, toggleMenu }) => {

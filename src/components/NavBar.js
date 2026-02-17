@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import styled from "styled-components";
 import MobileNavbar from "./MobileNavbar";
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ThemeToggleComponent';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
