@@ -55,8 +55,7 @@ const navExperience = () => {
               </li>
               <li>
                 <div style={{ marginTop: '1.25rem' }}>
-                  {/* Render ThemeToggleComponent inside mobile menu to avoid import issues on older environments */}
-                  <div id="mobile-theme-toggle-root"></div>
+                  {/* theme toggle removed */}
                 </div>
               </li>
             </ul>

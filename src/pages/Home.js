@@ -178,11 +178,6 @@ const navAboutMe = () => {
       <div className="top-btn">
         <a href="/"><img src={backToTop} alt="arrow up"/></a>
       </div>
-      {/* Theme toggle button placed next to top button */}
-      <div style={{ position: 'fixed', bottom: '5rem', right: '4.5rem' }}>
-        {/* The ThemeToggle component will be rendered by index.js globally to avoid prop drilling */}
-        <div id="theme-toggle-root" />
-      </div>
       <div style={{ margin: '6rem 0' }} />
     </>
   );

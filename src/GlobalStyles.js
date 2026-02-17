@@ -6,38 +6,17 @@ html {
     scroll-behavior: smooth;
 }
 
-:root{
-    /* default (dark) theme variables */
-    --bg: radial-gradient(circle, #1F184E, #0A0529);
-    --text-color: whitesmoke;
-    --muted: rgba(255,255,255,0.7);
-    --sidebar-bg: rgba(255,255,255,0.03);
-    --card-text: #ffffff;
-}
-
-body{
+body {
     font-family: "Poppins", sans-serif;
-    background-image: var(--bg);
+    background-image: radial-gradient(circle, #1F184E, #0A0529);
     margin: 0;
     overflow-x: hidden;
-    color: var(--text-color);
+    color: whitesmoke;
 
     @media all and (min-width: 969px) {
         width: 100vw;
     }
 }
-
-
-body.light-mode{
-    --bg: radial-gradient(circle, #f8fafc, #eef2ff);
-    --text-color: #0b1220;
-    --muted: rgba(11,18,32,0.7);
-    --sidebar-bg: rgba(0,0,0,0.04);
-    --card-text: #0b1220;
-}
-
-/* Make any elements using Bootstrap's text-white follow the theme instead of forcing white */
-.text-white{ color: var(--text-color) !important; }
 
 h2 {
     display: flex;

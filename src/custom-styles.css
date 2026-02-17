@@ -208,3 +208,7 @@
   outline: 3px solid #3672FF;
   outline-offset: 2px;
 }
+
+/* remove theme-toggle styles (feature removed) */
+/* remove theme-toggle styles (feature removed) */
+.theme-toggle { display: none !important; }
