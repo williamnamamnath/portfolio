@@ -6,6 +6,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Enable native momentum scrolling for touch devices on scrollable containers */
+.scrollable {
+    -webkit-overflow-scrolling: touch;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-image: radial-gradient(circle, #1F184E, #0A0529);

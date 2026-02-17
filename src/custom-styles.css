@@ -60,6 +60,15 @@
   --card-shadow: 0 8px 30px rgba(0,70,234,0.12);
 }
 
+/* make body and html use smooth behavior (already in GlobalStyles but keep here for any raw css consumers) */
+html{ scroll-behavior: smooth; }
+
+/* Generic class to mark scrollable areas with iOS momentum */
+.scrollable{ -webkit-overflow-scrolling: touch; }
+
+/* Hint to the browser that transforms/opacity will change so it can promote to compositor */
+.will-change-transform{ will-change: transform, opacity; }
+
 /* Entrance animations */
 .fade-up{ opacity: 0; transform: translateY(14px); animation: fadeUp 2000ms forwards; }
 .fade-in-left{ opacity: 0; transform: translateX(-18px); animation: fadeLeft 2000ms forwards; }
