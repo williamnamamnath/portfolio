@@ -20,10 +20,6 @@ const NavBar = () => {
 
     const navigate = useNavigate();
 
-const navProjects = () => {
-  navigate('/projects'); 
-};
-
 const navAboutMe = () => {
   navigate('/about'); 
 };
@@ -40,9 +36,6 @@ const navExperience = () => {
             <NavContent>
             <Social href="/" aria-label="Homepage"><Img src={name} alt="website logo"/></Social>
             <Ul>
-              <Li>
-                <MenuItem onClick={navProjects}>My Projects</MenuItem>
-              </Li>
               <Li>
                 <MenuItem onClick={navAboutMe}>About Me</MenuItem>
               </Li>

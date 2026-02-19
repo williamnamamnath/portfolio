@@ -5,16 +5,11 @@ import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import ThemeToggle from './ThemeToggleComponent';
 
 
 const MobileNavbar = ({ isOpen, toggleMenu }) => {
 
     const navigate = useNavigate();
-
-const navProjects = () => {
-  navigate('/projects'); 
-};
 
 const navAboutMe = () => {
   navigate('/about'); 
@@ -29,16 +24,13 @@ const navExperience = () => {
         <>
         <div id="mobile-navigation" className={`mobile-nav ${isOpen ? "active" : ""}`} onClick={(e) => { if (e.target === e.currentTarget) toggleMenu(); }}>
             <NavContainer onClick={(e) => e.stopPropagation()}>
-                <CloseMenu role="heading" onClick={toggleMenu} aria-label="Close menu">Welcome to my portfolio!</CloseMenu>
+                <CloseMenu role="heading" onClick={toggleMenu} aria-label="Close menu">William Nam-Amnath</CloseMenu>
                 <hr/>
                 <br/>
 
             <ul>
             <li>
                 <MenuItem as="a" href="/">Home</MenuItem>
-              </li>
-            <li>
-                <MenuItem as="a" onClick={navProjects}>My Projects</MenuItem>
               </li>
             <li>
                 <MenuItem as="a" onClick={navAboutMe}>About Me</MenuItem>
