@@ -12,11 +12,11 @@ const Experience = () => {
 
     return (
         <>
-        <div style={{ margin: '6rem 0' }} />
+        <div style={{ margin: '6rem 0 0 0' }} />
         <h1 className="text-center text-white mb-5" style={{ fontFamily: 'Open Sans, sans-serif' }}>
             My Academic and Professional Experience 
         </h1>
-        <Container className="py-5">
+        <Container className="pt-5">
             
             <Tab.Container activeKey={key} onSelect={(k) => setKey(k)}>
                 <Row className="justify-content-center mb-5">
@@ -177,7 +177,7 @@ const Experience = () => {
                 </Row>
             </Tab.Container>
         </Container>
-        <div style={{ margin: '8rem 0' }} />
+        <div style={{ margin: '2rem 0' }} />
         
         <style>{`
             @keyframes fadeIn {

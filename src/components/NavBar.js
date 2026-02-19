@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import styled from "styled-components";
 import MobileNavbar from "./MobileNavbar";
@@ -18,16 +17,6 @@ const NavBar = () => {
         setMenuClicked(!menuClicked);
     };
 
-    const navigate = useNavigate();
-
-const navAboutMe = () => {
-  navigate('/about'); 
-};
-
-const navExperience = () => {
-    navigate('/experience'); 
-  };
-
     return (
         <>
         <MobileNavbar isOpen={menuClicked} toggleMenu={toggleMenu} />
@@ -36,12 +25,6 @@ const navExperience = () => {
             <NavContent>
             <Social href="/" aria-label="Homepage"><Img src={name} alt="website logo"/></Social>
             <Ul>
-              <Li>
-                <MenuItem onClick={navAboutMe}>About Me</MenuItem>
-              </Li>
-              <Li>
-                <MenuItem onClick={navExperience}>My Background</MenuItem>
-              </Li>
               <Li>
                 <SocialsDiv>
                 <SocialLogo href="https://github.com/williamnamamnath" target="_blank" rel="noopener noreferrer"><FaGithub /></SocialLogo>
@@ -99,40 +82,6 @@ const Ul = styled.ul`
 const Li = styled.li`
     color: white;
     margin: 0 1.5rem;
-`
-
-const MenuItem = styled.button`
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: white;
-    position: relative;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-    display: inline-block;
-    text-align: left;
-    line-height: 1;
-
-    &:before {
-        content: "";
-        width: 2rem;
-        height: 0.2rem;
-        background: linear-gradient(90deg, #3672FF 0%, #0046EA 100%);
-        border-radius: 0.5rem;
-        position: absolute;
-        bottom: -0.6rem;
-        opacity: 0;
-        transform: translateX(-1.5rem);
-        transition: all 0.3s ease;
-    }
-
-    &:hover::before {
-        width: 100%;
-        transform: translateX(0);
-        opacity: 1;
-    }
 `
 
 const Button = styled.button`

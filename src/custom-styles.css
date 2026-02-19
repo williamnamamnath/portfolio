@@ -111,17 +111,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 3rem;
   padding-bottom: 3rem;
   box-sizing: border-box;
 }
 
 @media (min-width: 768px){
-  .hero-section{ padding-top: 4rem; padding-bottom: 4rem; }
+  .hero-section{ padding-top: 2rem; padding-bottom: 4rem; }
 }
 
 @media (min-width: 1200px){
-  .hero-section{ padding-top: 5rem; padding-bottom: 5rem; }
+  .hero-section{ padding-top: 3rem; padding-bottom: 5rem; }
+}
+
+/* Generic full-page section wrapper so each major area fills the viewport */
+.page-section{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px){
+  .page-section{ padding: 5rem 0; }
 }
 
 .project-content{
@@ -212,3 +225,5 @@
 /* remove theme-toggle styles (feature removed) */
 /* remove theme-toggle styles (feature removed) */
 .theme-toggle { display: none !important; }
+
+

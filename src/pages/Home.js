@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
+
+import Experience from "./Experience";
 
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -37,14 +38,6 @@ const navigate = useNavigate();
       const handleClickMovieNight = () => {
         navigate('/movie-night'); 
       };
-
-const navExperience = () => {
-  navigate('/experience'); 
-};
-
-const navAboutMe = () => {
-  navigate('/about'); 
-};
 
   return (
     <>
@@ -108,24 +101,33 @@ const navAboutMe = () => {
               </a>
             </div>
           </div>
-
         </div>
       </div>
-      <div className="container my-5">
-        <div>
-          <aside className="sidebar-card p-4 text-center text-white fade-up delay-3">
-            <h4>Want to know more about me?<br/>Let's get started.</h4>
+
+      <section className="page-section">
+        <div className="container">
+          <aside className="sidebar-card p-4 fade-up delay-3">
+            <h1>Hi There! 👋</h1>
             <div className="d-grid gap-3 mt-4">
-              <Button onClick={navAboutMe} className="rounded-pill p-3 w-100 cta-btn">About Me</Button>
-              <Button onClick={navExperience} className="rounded-pill p-3 w-100 cta-btn">My Background</Button>
+              <p>I am a full-stack web developer based in Montreal, Canada and I specialize in building responsive and user-friendly web applications with the MERN stack. Full-stack projects.
+              </p>
             </div>
           </aside>
         </div>
-        
-        {/* Stack carousel above the buttons vertically */}
-        <div className="mb-4">
+      </section>
+
+      <section className="page-section">
+        <div className="container">
+          <aside className="sidebar-card p-4 fade-up delay-3 project-card">
+            <Experience />
+          </aside>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="container">
           <div className="project-card p-3 fade-up delay-2">
-            <h4 className="text-white m-3 p-2">My Projects</h4>
+            <h1 className="text-white text-center m-3 p-2">My Projects</h1>
             <Carousel
               interval={null}
               indicators={true}
@@ -171,14 +173,12 @@ const navAboutMe = () => {
             </Carousel>
           </div>
         </div>
-
-        
-      </div>
+      </section>
 
       <div className="top-btn">
         <a href="/"><img src={backToTop} alt="arrow up"/></a>
       </div>
-      <div style={{ margin: '6rem 0' }} />
+      <div style={{ margin: '2rem 0' }} />
     </>
   );
 }

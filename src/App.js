@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home"
-import AboutMe from "./pages/AboutMe";
 import CheckIt from "./projects/Checkit";
 import NFIB from "./projects/NFIB";
 import Emporium from "./projects/Emporium";
@@ -24,7 +23,6 @@ const App = () => {
             <GlobalStyles />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<AboutMe />} />
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/checkit" element={<CheckIt />} />
                 <Route path="/nfib" element={<NFIB />} />
