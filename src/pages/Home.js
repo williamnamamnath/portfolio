@@ -118,7 +118,7 @@ const navigate = useNavigate();
 
       <section className="page-section">
         <div className="container">
-          <aside className="sidebar-card p-4 fade-up delay-3 project-card">
+          <aside className="p-4 fade-up delay-3">
             <Experience />
           </aside>
         </div>
@@ -126,7 +126,7 @@ const navigate = useNavigate();
 
       <section className="page-section">
         <div className="container">
-          <div className="project-card p-3 fade-up delay-2">
+          <div className="p-3 fade-up delay-2">
             <h1 className="text-white text-center m-3 p-2">My Projects</h1>
             <Carousel
               interval={null}

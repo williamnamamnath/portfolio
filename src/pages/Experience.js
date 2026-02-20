@@ -19,7 +19,7 @@ const Experience = () => {
         <Container className="pt-5">
             
             <Tab.Container activeKey={key} onSelect={(k) => setKey(k)}>
-                <Row className="justify-content-center mb-5">
+                <Row className="justify-content-center mb-2">
                     <Col lg={8} md={10}>
                         <Nav variant="pills" className="justify-content-center gap-3">
                                     <Nav.Item>
