@@ -138,14 +138,8 @@ const SocialsDiv = styled.div`
 `
 
 const SocialLogo = styled.a`
-    transition: transform 0.3s ease;
     color: white;
     font-size: 1.5rem;
-
-&:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
 `
 
 export default NavBar;

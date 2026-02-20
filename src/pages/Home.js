@@ -71,9 +71,6 @@ const navigate = useNavigate();
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white fs-2"
-                style={{ transition: 'transform 0.3s ease' }}
-                onMouseEnter={(e) => e.target.style.transform = 'scale(1.2)'}
-                onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
               >
                 <FaGithub />
               </a>
@@ -82,9 +79,6 @@ const navigate = useNavigate();
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white fs-2"
-                style={{ transition: 'transform 0.3s ease' }}
-                onMouseEnter={(e) => e.target.style.transform = 'scale(1.2)'}
-                onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
               >
                 <FaLinkedin />
               </a>
@@ -93,9 +87,6 @@ const navigate = useNavigate();
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white fs-2"
-                style={{ transition: 'transform 0.3s ease' }}
-                onMouseEnter={(e) => e.target.style.transform = 'scale(1.2)'}
-                onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
               >
                 <MdEmail />
               </a>
