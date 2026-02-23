@@ -42,7 +42,9 @@ const navigate = useNavigate();
   return (
     <>
       <div className="hero-section">
-        <div className="d-flex justify-content-center align-items-center flex-wrap"> 
+        <div
+          className="d-flex justify-content-center align-items-center flex-wrap pulsing-glow"
+        >
 
           <div className="d-inline-block p-4 fade-in-left delay-0">
             <img 
