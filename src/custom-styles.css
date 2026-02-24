@@ -83,30 +83,22 @@
   .hero-subtitle{ font-size: 1.1rem; }
 }
 
-/* Pulsing glow behind element */
-.pulsing-glow{
+.hero-particles-container{
   position: relative;
-  z-index: 0;
-  border-radius: 12px;
-  padding: 8px;
-  background-clip: padding-box;
+  overflow: hidden;
 }
-.pulsing-glow::after{
-  content: '';
+.hero-particles-canvas{
   position: absolute;
-  inset: -12px; /* place glow outside border */
-  border-radius: inherit;
+  inset: 0; 
+  width: 100%;
+  height: 100%;
+  z-index: -3;
   pointer-events: none;
-  z-index: -1;
-  box-shadow: 0 0 12px 4px rgba(99,179,255,0.28), 0 0 30px 10px rgba(255,100,150,0.16);
-  transform: scale(1);
-  opacity: 0.9;
-  animation: pulse 2600ms ease-in-out infinite;
 }
-@keyframes pulse{
-  0%{ transform: scale(0.98); opacity: 0.75; }
-  50%{ transform: scale(1.06); opacity: 1; }
-  100%{ transform: scale(0.98); opacity: 0.75; }
+
+.hero-particles-container > .d-flex{ position: relative; z-index: 2; }
+@media (max-width: 767px){
+  .hero-particles-canvas{ opacity: 0.9; }
 }
 
 
@@ -131,9 +123,8 @@
   justify-content:center;
 }
 
-/* Hero section spacing: keep profile section visible on first load */
 .hero-section{
-  min-height: 100vh; /* make hero occupy full viewport so rest is below the fold on load */
+  min-height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,7 +220,6 @@
   will-change: transform;
 }
 
-/* Fade the inner content for a nicer cross-fade */
 .project-carousel .project-content {
   opacity: 0;
   transform: translateY(6px);
@@ -268,6 +258,9 @@
   .sidebar-card{ margin-left: 0; padding-top: 1rem; }
 .project-tile{ min-height: 360px; }
 }
+
+
+
 
 
 
