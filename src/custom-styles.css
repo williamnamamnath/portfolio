@@ -215,6 +215,52 @@
   .project-tile{ min-height: 260px; }
 }
 
+/* Make carousel slide transitions linear and constant-feel and add cross-fade */
+.project-carousel .carousel-item {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 900ms ease, transform 900ms ease;
+}
+.project-carousel .carousel-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-carousel .carousel-inner {
+  will-change: transform;
+}
+
+/* Fade the inner content for a nicer cross-fade */
+.project-carousel .project-content {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 900ms ease, transform 900ms ease;
+}
+.project-carousel .carousel-item.active .project-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slight scale on hover to indicate interactivity */
+.project-carousel .project-content:hover {
+  transform: translateY(0) scale(1.02);
+}
+
+/* Carousel progress/loading bar */
+.project-carousel{ position: relative; }
+.project-carousel .carousel-progress{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background-color: white;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation-name: progressBar;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.project-carousel:hover .carousel-progress{ animation-play-state: paused; }
+@keyframes progressBar{ from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
 /* Overlap: place carousel visually on top of the sidebar on larger screens */
 @media (min-width: 768px) {
   /* ensure vertical stacking keeps spacing on larger screens */

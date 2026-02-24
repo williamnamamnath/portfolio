@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 
@@ -23,6 +23,9 @@ const Home = () => {
 
 const navigate = useNavigate();
 
+  const [progressKey, setProgressKey] = useState(0);
+  const carouselInterval = 4000;
+
     const handleClickNFIB = () => {
         navigate('/nfib'); 
       };
@@ -38,6 +41,8 @@ const navigate = useNavigate();
       const handleClickMovieNight = () => {
         navigate('/movie-night'); 
       };
+
+  
 
   return (
     <>
@@ -121,12 +126,16 @@ const navigate = useNavigate();
         <div className="container">
           <div className="p-3 fade-up delay-2">
             <h1 className="text-white text-center m-3 p-2">My Projects</h1>
-            <Carousel
-              interval={null}
-              indicators={true}
-              controls={true}
-              className="project-carousel"
-            >
+            <div className="project-carousel">
+              <Carousel
+                fade={true}
+                interval={4000}
+                pause={'hover'}
+                wrap={true}
+                indicators={true}
+                controls={true}
+                onSlide={() => setProgressKey(k => k + 1)}
+              >
               <Carousel.Item>
                 <div className="project-tile d-flex justify-content-center align-items-center">
                   <div onClick={handleClickMovieNight} className="project-content text-center">
@@ -162,8 +171,17 @@ const navigate = useNavigate();
                   </div>
                 </div>
               </Carousel.Item>
+              </Carousel>
 
-            </Carousel>
+              <div style={{ position: 'relative', marginTop: '0.75rem', padding: '6px', borderRadius: '999px', border: '2px solid rgba(255,255,255,0.85)', backgroundColor: 'rgba(255,255,255,0.02)', boxShadow: '0 6px 18px rgba(0,0,0,0.18)' }}>
+                <div
+                  className="carousel-progress"
+                  key={progressKey}
+                  style={{ animationDuration: `${carouselInterval}ms`, height: '8px', backgroundColor: '#ffffff', boxShadow: 'inset 0 0 6px rgba(0,0,0,0.06)' }}
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
