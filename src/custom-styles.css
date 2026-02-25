@@ -88,13 +88,19 @@
   overflow: hidden;
 }
 .hero-particles-canvas{
-  position: absolute;
-  inset: 0; 
-  width: 100%;
-  height: 100%;
-  z-index: -3;
-  pointer-events: none;
+  position: fixed; /* keep canvas out of document flow to avoid layout/repaints on scroll */
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  width: 100vw;
+  height: 100vh;
+  z-index: -2; /* behind page content */
+  pointer-events: none; /* don't intercept touches */
+  transform: translateZ(0); /* promote to its own layer for smoother compositing */
+  -webkit-transform: translateZ(0);
+  will-change: transform, opacity;
 }
+
+/* ensure hero content stacks above the fixed canvas */
+.hero-section{ position: relative; z-index: 0; }
 
 .hero-particles-container > .d-flex{ position: relative; z-index: 2; }
 @media (max-width: 767px){
@@ -258,6 +264,25 @@
   .sidebar-card{ margin-left: 0; padding-top: 1rem; }
 .project-tile{ min-height: 360px; }
 }
+
+
+
+
+/* Project pages: increase vertical spacing between sections */
+.project-page .row {
+  margin-bottom: 5rem !important;
+}
+
+@media (min-width: 768px) {
+  .project-page .row { margin-bottom: 6rem !important; }
+}
+
+@media (min-width: 1200px) {
+  .project-page .row { margin-bottom: 8rem !important; }
+}
+
+  /* ensure project content stacks above fixed canvas */
+  .project-page{ position: relative; z-index: 0; }
 
 
 
