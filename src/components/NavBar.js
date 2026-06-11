@@ -1,10 +1,8 @@
 import { useState } from "react";
 
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import MobileNavbar from "./MobileNavbar";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 
 import name from "../images/w-logo.png";
 
@@ -26,11 +24,10 @@ const NavBar = () => {
             <Social href="/" aria-label="Homepage"><Img src={name} alt="website logo"/></Social>
             <Ul>
               <Li>
-                <SocialsDiv>
-                <SocialLogo href="https://github.com/williamnamamnath" target="_blank" rel="noopener noreferrer"><FaGithub /></SocialLogo>
-                <SocialLogo href="https://www.linkedin.com/in/william-nam-amnath/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></SocialLogo>
-                <SocialLogo href="mailto:william.nam-amnath@mail.mcgill.ca" target="_blank" rel="noopener noreferrer"><MdEmail /></SocialLogo>
-                </SocialsDiv>
+                <StyledNavLink to="/">Home</StyledNavLink>
+              </Li>
+              <Li>
+                <StyledNavLink to="/experience">Experience</StyledNavLink>
               </Li>
             </Ul>
             <Button onClick={toggleMenu} aria-expanded={menuClicked} aria-controls="mobile-navigation" aria-label={menuClicked ? "Close menu" : "Open menu"}>
@@ -81,7 +78,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
     color: white;
-    margin: 0 1.5rem;
+    margin: 0 0.5rem;
 `
 
 const Button = styled.button`
@@ -126,20 +123,25 @@ const Img = styled.img`
     }
 `
 
-const SocialsDiv = styled.div`
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    color: black;
-    border-radius: 30px;
-    margin: 0;
-    padding: 1rem 0;
-`
+const StyledNavLink = styled(NavLink)`
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
 
-const SocialLogo = styled.a`
-    color: white;
-    font-size: 1.5rem;
+    &:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    &.active {
+        color: #ffffff;
+        background: rgba(54, 114, 255, 0.25);
+        border-bottom: 2px solid #3672FF;
+    }
 `
 
 export default NavBar;

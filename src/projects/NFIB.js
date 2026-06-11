@@ -162,19 +162,13 @@ const NFIB = () => {
 
             <Row>
                 <Col className="text-center">
-                    <a href="/nfib">
-                        <img 
-                            src={backToTop} 
-                            alt="Back to top" 
-                            style={{ 
-                                width: '50px',
-                                transition: 'transform 0.3s ease',
-                                cursor: 'pointer'
-                            }}
-                            onMouseEnter={(e) => e.target.style.transform = 'translateY(-10px)'}
-                            onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
-                        />
-                    </a>
+                    <button
+                        className="back-to-top-btn"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        aria-label="Back to top"
+                    >
+                        <img src={backToTop} alt="Back to top" className="back-to-top-img" />
+                    </button>
                 </Col>
             </Row>
         </Container>

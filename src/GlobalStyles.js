@@ -67,13 +67,10 @@ h4 {
     margin-left: -2rem;
 }
 
-.top-btn a {
+.top-btn {
     position: fixed;
-    background-color: lightgray;
     bottom: 5rem;
     right: 1rem;
-    padding: 0.6rem 0.5rem 0.5rem 0.5rem;
-    border-radius: 20px;
 }
 
 /* Focus-visible styles for keyboard users */
@@ -98,6 +95,7 @@ h4 {
     padding: 15px;
     flex-wrap: wrap;
     color: white;
+    display: flex;
 }
 `;
 

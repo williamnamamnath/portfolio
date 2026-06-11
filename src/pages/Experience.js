@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Tab, Nav, Container, Row, Col, Card } from 'react-bootstrap';
+import { Tab, Nav, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -25,25 +25,7 @@ const Experience = () => {
                                     <Nav.Item>
                                         <Nav.Link 
                                             eventKey="education"
-                                            style={{
-                                                padding: '1rem 2.5rem',
-                                                borderRadius: '50px',
-                                                background: key === 'education' ? 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)' : 'transparent',
-                                                color: key === 'education' ? 'white' : '#3672FF',
-                                                border: key === 'education' ? 'none' : '2px solid #3672FF',
-                                                fontWeight: '600',
-                                                transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                if (key !== 'education') {
-                                                    e.target.style.background = 'rgba(54, 114, 255, 0.1)';
-                                                }
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                if (key !== 'education') {
-                                                    e.target.style.background = 'transparent';
-                                                }
-                                            }}
+                                            className={`exp-tab-link ${key === 'education' ? 'exp-tab-link--active' : ''}`}
                                         >
                                             🎓 Education
                                         </Nav.Link>
@@ -51,25 +33,7 @@ const Experience = () => {
                             <Nav.Item>
                                 <Nav.Link 
                                     eventKey="experience"
-                                    style={{
-                                        padding: '1rem 2.5rem',
-                                        borderRadius: '50px',
-                                        background: key === 'experience' ? 'linear-gradient(90deg, #3672FF 0%, #0046EA 100%)' : 'transparent',
-                                        color: key === 'experience' ? 'white' : '#3672FF',
-                                        border: key === 'experience' ? 'none' : '2px solid #3672FF',
-                                        fontWeight: '600',
-                                        transition: 'all 0.3s ease'
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        if (key !== 'experience') {
-                                            e.target.style.background = 'rgba(54, 114, 255, 0.1)';
-                                        }
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        if (key !== 'experience') {
-                                            e.target.style.background = 'transparent';
-                                        }
-                                    }}
+                                    className={`exp-tab-link ${key === 'experience' ? 'exp-tab-link--active' : ''}`}
                                 >
                                     💼 Professional Experience
                                 </Nav.Link>
@@ -83,94 +47,62 @@ const Experience = () => {
                     <Col lg={10} md={12}>
                         <Tab.Content>
                             <Tab.Pane eventKey="experience">
-                                <Card 
-                                    className="m-4 mt-5" 
-                                    style={{ 
-                                        backgroundImage: 'linear-gradient(-20deg, #2b5876 0%, #4e4376 100%)',
-                                        border: 'none',
-                                        borderRadius: '20px',
-                                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-                                        animation: 'fadeIn 0.5s ease-in'
-                                    }}
-                                >
-                                    <Card.Body className="p-5 my-3 experience-card-body">
-                                        <div className="d-flex align-items-center my-4">
-                                            <div>
-                                                <h3 className="mb-1 text-white" style={{ fontWeight: '700' }}>Freelance Web Developer</h3>
-                                                <p className="mb-0 text-white" style={{ opacity: 0.9 }}>
-                                                    <p>July 2024 - Present</p>
+                                <div className="timeline">
+                                    <div className="timeline-item">
+                                        <div className="timeline-dot"></div>
+                                        <div className="timeline-card">
+                                            <div className="timeline-header">
+                                                <h3 className="mb-1 text-white">Freelance Web Developer</h3>
+                                                <span className="timeline-date">July 2024 – Present</span>
+                                            </div>
+                                            <hr className="timeline-divider" />
+                                            <div className="text-white timeline-body">
+                                                <p className="mb-3">
+                                                    Creating a comprehensive website for a subdivision of the medical genetics department at the Montreal University Health Centre.
                                                 </p>
+                                                <ul className="timeline-list">
+                                                    <li>Developing custom web solutions for medical research presentation</li>
+                                                    <li>Collaborating with medical professionals to translate complex genetics information into accessible web content</li>
+                                                    <li>Implementing responsive design for optimal viewing across all devices</li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <hr style={{ color: 'whitesmoke' }}/>
-                                        <div className="text-white mt-5" style={{ lineHeight: '1.8' }}>
-                                            <p className="mb-3">
-                                                Creating a comprehensive website for a subdivision of the medical genetics department at the Montreal University Health Centre
-                                            </p>
-                                            <ul style={{ paddingLeft: '1.5rem' }}>
-                                                <li>Developing custom web solutions for medical research presentation</li>
-                                                <li>Collaborating with medical professionals to translate complex genetics information into accessible web content</li>
-                                                <li>Implementing responsive design for optimal viewing across all devices</li>
-                                            </ul>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
+                                    </div>
+                                </div>
                             </Tab.Pane>
 
                             <Tab.Pane eventKey="education">
-                                <Card 
-                                    className="m-4 mt-5" 
-                                    style={{ 
-                                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                        border: 'none',
-                                        borderRadius: '20px',
-                                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-                                        animation: 'fadeIn 0.5s ease-in'
-                                    }}
-                                >
-                                    <Card.Body className="p-5 my-3 education-card-body">
-                                        <div className="d-flex align-items-center my-4">
-                                            <div>
-                                                <h3 className="mb-1 text-white" style={{ fontWeight: '700' }}>Web Development Certificate</h3>
-                                                <p className="text-white" style={{ opacity: 0.9 }}>
-                                                    <strong>Concordia University Bootcamp</strong> | October 2023 - May 2024
-                                                </p>
+                                <div className="timeline">
+                                    <div className="timeline-item">
+                                        <div className="timeline-dot"></div>
+                                        <div className="timeline-card">
+                                            <div className="timeline-header">
+                                                <h3 className="mb-1 text-white">Web Development Certificate</h3>
+                                                <span className="timeline-date">October 2023 – May 2024</span>
+                                            </div>
+                                            <p className="text-white timeline-institution">Concordia University Bootcamp</p>
+                                            <hr className="timeline-divider" />
+                                            <div className="text-white timeline-body">
+                                                <p>Intensive full-stack web development program covering modern technologies and frameworks including the MERN stack, responsive design, and agile development methodologies.</p>
                                             </div>
                                         </div>
-                                        <hr style={{ color: 'whitesmoke' }}/>
+                                    </div>
 
-                                        <div className="text-white mt-5" style={{ lineHeight: '1.8' }}>
-                                            <p>Intensive full-stack web development program covering modern technologies and frameworks including the MERN stack, responsive design, and agile development methodologies.</p>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-
-                                <Card 
-                                    className="m-4 mt-5" 
-                                    style={{ 
-                                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                        border: 'none',
-                                        borderRadius: '20px',
-                                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-                                        animation: 'fadeIn 0.6s ease-in'
-                                    }}
-                                >
-                                    <Card.Body className="p-5 my-3 education-card-body">
-                                        <div className="d-flex align-items-center my-4">
-                                            <div>
-                                                <h3 className="text-white" style={{ fontWeight: '700' }}>Bachelor of Education</h3>
-                                                <p className="text-white" style={{ opacity: 0.9 }}>
-                                                    <strong>McGill University</strong> | August 2017 - April 2021
-                                                </p>
-                                                <p className="mb-2 text-white" style={{ opacity: 0.9 }}>Teaching English as a Second Language (TESL)</p>
+                                    <div className="timeline-item">
+                                        <div className="timeline-dot"></div>
+                                        <div className="timeline-card">
+                                            <div className="timeline-header">
+                                                <h3 className="mb-1 text-white">Bachelor of Education</h3>
+                                                <span className="timeline-date">August 2017 – April 2021</span>
+                                            </div>
+                                            <p className="text-white timeline-institution">McGill University — Teaching English as a Second Language (TESL)</p>
+                                            <hr className="timeline-divider" />
+                                            <div className="text-white timeline-body">
+                                                <p style={{ opacity: 0.9 }}>Developed strong communication, problem-solving, and organizational skills that translate effectively to collaborative software development environments.</p>
                                             </div>
                                         </div>
-                                        <hr style={{ color: 'whitesmoke' }}/>
-                                        <div className="text-white mt-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                            <p className="mb-0" style={{ opacity: 0.9 }}>Developed strong communication, problem-solving, and organizational skills that translate effectively to collaborative software development environments.</p>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
+                                    </div>
+                                </div>
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>
@@ -190,19 +122,114 @@ const Experience = () => {
                     transform: translateY(0);
                 }
             }
-            
+
+            .exp-tab-link {
+                padding: 1rem 2.5rem;
+                border-radius: 50px;
+                background: transparent;
+                color: #3672FF;
+                border: 2px solid #3672FF;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+            .exp-tab-link:hover:not(.exp-tab-link--active) {
+                background: rgba(54, 114, 255, 0.1);
+                color: #3672FF;
+            }
+            .exp-tab-link--active,
+            .exp-tab-link.active {
+                background: linear-gradient(90deg, #3672FF 0%, #0046EA 100%) !important;
+                color: white !important;
+                border-color: transparent !important;
+            }
+
+            .timeline {
+                position: relative;
+                padding: 2rem 0;
+            }
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 18px;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: linear-gradient(180deg, #3672FF, #0046EA);
+                opacity: 0.5;
+            }
+            .timeline-item {
+                position: relative;
+                padding-left: 3.5rem;
+                margin-bottom: 2.5rem;
+                animation: fadeIn 0.5s ease-in;
+            }
+            .timeline-dot {
+                position: absolute;
+                left: 8px;
+                top: 1.4rem;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #3672FF, #0046EA);
+                box-shadow: 0 0 0 4px rgba(54, 114, 255, 0.2);
+            }
+            .timeline-card {
+                background: linear-gradient(135deg, rgba(54, 114, 255, 0.1) 0%, rgba(0, 70, 234, 0.18) 100%);
+                border: 1px solid rgba(54, 114, 255, 0.2);
+                border-radius: 16px;
+                padding: 1.8rem 2rem;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(8px);
+            }
+            .timeline-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 0.25rem;
+            }
+            .timeline-date {
+                color: rgba(255, 255, 255, 0.65);
+                font-size: 0.9rem;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+            .timeline-institution {
+                font-weight: 600;
+                font-size: 0.95rem;
+                opacity: 0.85;
+                margin-bottom: 0.5rem;
+            }
+            .timeline-divider {
+                border-color: rgba(255, 255, 255, 0.15);
+                margin: 0.75rem 0 1rem;
+            }
+            .timeline-body {
+                line-height: 1.8;
+                font-size: 1rem;
+            }
+            .timeline-list {
+                padding-left: 1.25rem;
+                margin: 0;
+            }
+            .timeline-list li {
+                margin-bottom: 0.5rem;
+            }
+
             @media (max-width: 768px) {
                 .container h1 {
                     font-size: 2.5rem !important;
                 }
-                .nav-link {
+                .exp-tab-link {
                     font-size: 1rem !important;
                     padding: 0.8rem 1.5rem !important;
                 }
-                .experience-card-body,
-                .education-card-body {
-                    padding: 3rem 1.5rem !important;
-                    margin: 1.5rem 0 !important;
+                .timeline-card {
+                    padding: 1.25rem 1rem !important;
+                }
+                .timeline-header {
+                    flex-direction: column;
                 }
             }
         `}</style>
