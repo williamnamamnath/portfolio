@@ -2,14 +2,16 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 
-import Experience from "./Experience";
-
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaChevronDown } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 import backToTop from "../images/arrow-up.png";
 import picture from "../images/profile-picture.jpg";
+import movieNightThumb from "../images/hero-section-image.png";
+import emporiumThumb from "../images/emporium-small.JPG";
+import checkitThumb from "../images/checkit-app.JPG";
+import nfibThumb from "../images/nfib-small.JPG";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../custom-styles.css';
@@ -59,14 +61,7 @@ const navigate = useNavigate();
             <img 
               src={picture} 
               alt="William Nam-Amnath" 
-              style={{
-                borderRadius: '200px',
-                height: '320px',
-                width: '320px',
-                objectFit: 'cover',
-                boxShadow: '0 2px 20px 0 gray'
-              }}
-              className="profile-picture"
+              className="profile-picture hero-profile-picture"
             />
           </div>
 
@@ -81,7 +76,7 @@ const navigate = useNavigate();
                 href="https://github.com/williamnamamnath" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white fs-2"
+                className="hero-social-link"
               >
                 <FaGithub />
               </a>
@@ -89,7 +84,7 @@ const navigate = useNavigate();
                 href="https://www.linkedin.com/in/william-nam-amnath/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white fs-2"
+                className="hero-social-link"
               >
                 <FaLinkedin />
               </a>
@@ -97,12 +92,16 @@ const navigate = useNavigate();
                 href="mailto:william.nam-amnath@mail.mcgill.ca" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white fs-2"
+                className="hero-social-link"
               >
                 <MdEmail />
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="scroll-down-indicator">
+          <FaChevronDown />
         </div>
       </div>
 
@@ -111,7 +110,7 @@ const navigate = useNavigate();
           <aside className="sidebar-card p-4 fade-up delay-3">
             <h1>Hi There! 👋</h1>
             <div className="d-grid gap-3 mt-4">
-              <p>I am a full-stack web developer based in Montreal, Canada and I specialize in building responsive and user-friendly web applications with the MERN stack. Full-stack projects.
+              <p>I am a full-stack web developer based in Montreal, Canada. I specialize in building responsive and user-friendly web applications with the MERN stack — from crafting clean frontends to designing robust backends and RESTful APIs.
               </p>
             </div>
           </aside>
@@ -120,9 +119,57 @@ const navigate = useNavigate();
 
       <section className="page-section">
         <div className="container">
-          <aside className="p-4 fade-up delay-3">
-            <Experience />
-          </aside>
+          <div className="fade-up delay-2">
+            <h1 className="text-white text-center mb-5">My Tech Stack</h1>
+            <div className="tech-stack-grid">
+              <div className="tech-stack-item">
+                <i className="devicon-html5-plain-wordmark colored tech-stack-icon"></i>
+                <span className="tech-stack-label">HTML5</span>
+              </div>
+              <div className="tech-stack-item">
+                <i className="devicon-css3-plain-wordmark colored tech-stack-icon"></i>
+                <span className="tech-stack-label">CSS3</span>
+              </div>
+              <div className="tech-stack-item">
+                <i className="devicon-javascript-plain colored tech-stack-icon"></i>
+                <span className="tech-stack-label">JavaScript</span>
+              </div>
+              <div className="tech-stack-item">
+                <i className="devicon-typescript-plain colored tech-stack-icon"></i>
+                <span className="tech-stack-label">TypeScript</span>
+              </div>
+              <div className="tech-stack-item">
+                <i className="devicon-react-original-wordmark colored tech-stack-icon"></i>
+                <span className="tech-stack-label">React</span>
+              </div>
+              <div className="tech-stack-item">
+                <i className="devicon-nodejs-plain-wordmark colored tech-stack-icon"></i>
+                <span className="tech-stack-label">Node.js</span>
+              </div>
+              <div className="tech-stack-item">
+                <i className="devicon-express-original-wordmark colored tech-stack-icon tech-stack-icon--invert"></i>
+                <span className="tech-stack-label">Express</span>
+              </div>
+              <div className="tech-stack-item">
+                <i className="devicon-mongodb-plain-wordmark colored tech-stack-icon"></i>
+                <span className="tech-stack-label">MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="container">
+          <div className="text-center fade-up delay-2">
+            <h1 className="text-white mb-4">My Experience</h1>
+            <p className="text-white mb-5 experience-teaser">
+              From a university bootcamp to freelance medical websites — here's my journey.
+            </p>
+            <a href="/experience" className="cta-btn text-decoration-none">
+              View My Experience →
+            </a>
+          </div>
         </div>
       </section>
 
@@ -143,8 +190,10 @@ const navigate = useNavigate();
               <Carousel.Item>
                 <div className="project-tile d-flex justify-content-center align-items-center">
                   <div onClick={handleClickMovieNight} className="project-content text-center">
-                    <h1 className="mb-4">🌟 Movie Night 🌟</h1>
-                    <h5>Full-Stack Project</h5>
+                    <img src={movieNightThumb} alt="Movie Night" className="project-thumb" />
+                    <h2 className="mt-3 mb-1">Movie Night</h2>
+                    <p className="project-tile-desc">Browse and save your favourite movies and TV shows in one place.</p>
+                    <h5 className="project-tile-badge">Full-Stack Project</h5>
                   </div>
                 </div>
               </Carousel.Item>
@@ -152,8 +201,10 @@ const navigate = useNavigate();
               <Carousel.Item>
                 <div className="project-tile d-flex justify-content-center align-items-center">
                   <div onClick={handleClickEmporium} className="project-content text-center">
-                    <h1 className="mb-4">🌟 E-Wear Emporium 🌟</h1>
-                    <h5>Team Project</h5>
+                    <img src={emporiumThumb} alt="E-Wear Emporium" className="project-thumb" />
+                    <h2 className="mt-3 mb-1">E-Wear Emporium</h2>
+                    <p className="project-tile-desc">A team-built MERN e-commerce store for fitness apparel.</p>
+                    <h5 className="project-tile-badge">Team Project</h5>
                   </div>
                 </div>
               </Carousel.Item>
@@ -161,8 +212,10 @@ const navigate = useNavigate();
               <Carousel.Item>
                 <div className="project-tile d-flex justify-content-center align-items-center">
                   <div onClick={handleClickCheckIt} className="project-content text-center">
-                    <h1 className="mb-4">🌟 CheckIt 🌟</h1>
-                    <h5>Beginner Typescript Project</h5>
+                    <img src={checkitThumb} alt="CheckIt" className="project-thumb" />
+                    <h2 className="mt-3 mb-1">CheckIt</h2>
+                    <p className="project-tile-desc">A TypeScript to-do app for managing and tracking daily tasks.</p>
+                    <h5 className="project-tile-badge">Beginner TypeScript Project</h5>
                   </div>
                 </div>
               </Carousel.Item>
@@ -170,8 +223,10 @@ const navigate = useNavigate();
               <Carousel.Item>
                 <div className="project-tile d-flex justify-content-center align-items-center">
                   <div onClick={handleClickNFIB} className="project-content text-center">
-                    <h1 className="mb-4">🌟 NFIB 🌟</h1>
-                    <h5>Freelance Project</h5>
+                    <img src={nfibThumb} alt="NFIB" className="project-thumb" />
+                    <h2 className="mt-3 mb-1">NFIB</h2>
+                    <p className="project-tile-desc">A freelance medical website for a genetics clinic at the MUHC.</p>
+                    <h5 className="project-tile-badge">Freelance Project</h5>
                   </div>
                 </div>
               </Carousel.Item>
@@ -191,7 +246,13 @@ const navigate = useNavigate();
       </section>
 
       <div className="top-btn">
-        <a href="/"><img src={backToTop} alt="arrow up"/></a>
+        <button
+          className="back-to-top-btn"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Back to top"
+        >
+          <img src={backToTop} alt="arrow up" />
+        </button>
       </div>
       <div style={{ margin: '2rem 0' }} />
     </>
