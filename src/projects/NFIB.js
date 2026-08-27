@@ -1,9 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import projectNFIB from "../images/NFIB-home-page.JPG";
 import backToTop from "../images/arrow-up.png"
-import useHeroParticles from "../hooks/useHeroParticles";
 
 const NFIB = () => {
 
@@ -11,13 +10,9 @@ const NFIB = () => {
     document.title = "Project NFIB"
 }, []);
 
-    const canvasRef = useRef(null);
-    useHeroParticles(canvasRef);
-
     return (
         <>
         <div style={{ margin: '6rem 0' }} />
-        <canvas ref={canvasRef} id="hero-particles" className="hero-particles-canvas" />
         
         <Container className="py-5 project-page">
             <Row className="mb-5">

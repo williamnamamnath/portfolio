@@ -24,15 +24,15 @@ const NavBar = () => {
             <Social href="/" aria-label="Homepage"><Img src={name} alt="website logo"/></Social>
             <Ul>
               <Li>
-                <StyledNavLink to="/">Home</StyledNavLink>
+                <StyledNavLink to="/experience">My Academic and Professional Experience</StyledNavLink>
               </Li>
               <Li>
-                <StyledNavLink to="/experience">Experience</StyledNavLink>
+                <NavAnchor href="/#projects">My Projects</NavAnchor>
               </Li>
             </Ul>
             <Button onClick={toggleMenu} aria-expanded={menuClicked} aria-controls="mobile-navigation" aria-label={menuClicked ? "Close menu" : "Open menu"}>
                 <span className={"material-symbols-outlined"} style={{fontSize: "1.8rem"}}>
-                    {menuClicked ? "Close" : "Menu"}
+                    {menuClicked ? "close" : "menu"}
                 </span>
             </Button>
             </NavContent>
@@ -141,6 +141,21 @@ const StyledNavLink = styled(NavLink)`
         color: #ffffff;
         background: rgba(54, 114, 255, 0.25);
         border-bottom: 2px solid #3672FF;
+    }
+`
+
+const NavAnchor = styled.a`
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.08);
     }
 `
 

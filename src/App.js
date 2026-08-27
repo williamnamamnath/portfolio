@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home"
+import FinanceTracker from "./projects/FinanceTracker";
 import CheckIt from "./projects/Checkit";
 import NFIB from "./projects/NFIB";
 import Emporium from "./projects/Emporium";
@@ -24,6 +25,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/experience" element={<Experience />} />
+                <Route path="/finance-tracker" element={<FinanceTracker />} />
                 <Route path="/checkit" element={<CheckIt />} />
                 <Route path="/nfib" element={<NFIB />} />
                 <Route path="/emporium" element={<Emporium />} />

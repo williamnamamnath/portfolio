@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import checkit from "../images/checkit-app.JPG"
-import backToTop from "../images/arrow-up.png"
+import financeTrackerHome from "../images/financetracker-home.png";
+import backToTop from "../images/arrow-up.png";
 
-const CheckIt = () => {
+const FinanceTracker = () => {
 
   useEffect(() => {
-    document.title = "CheckIt App"
+    document.title = "FinanceTracker"
 }, []);
 
     return (
@@ -25,7 +25,7 @@ const CheckIt = () => {
                         }}
                     >
                         <a 
-                            href="https://github.com/williamnamamnath/checkit-app" 
+                            href="https://github.com/williamnamamnath/finance-tracker" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="text-white text-decoration-none"
@@ -35,12 +35,11 @@ const CheckIt = () => {
                             onMouseEnter={(e) => e.target.style.color = '#3672FF'}
                             onMouseLeave={(e) => e.target.style.color = 'white'}
                         >
-                            CheckIt
+                            FinanceTracker
                         </a>
                     </h1>
                     <div className="text-center mb-4">
-                        <Badge bg="primary" className="me-2 fs-6 px-3 py-2">Beginner Project</Badge>
-                        <Badge bg="info" className="fs-6 px-3 py-2">TypeScript</Badge>
+                        <Badge bg="primary" className="me-2 fs-6 px-3 py-2">Full-Stack Project</Badge>
                     </div>
                 </Col>
             </Row>
@@ -48,14 +47,14 @@ const CheckIt = () => {
             <Row className="mb-5">
                 <Col lg={10} className="mx-auto">
                     <a 
-                        href="https://github.com/williamnamamnath/checkit-app" 
+                        href="https://github.com/williamnamamnath/finance-tracker" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="d-block"
                     >
                         <img 
-                            src={checkit} 
-                            alt="CheckIt Application" 
+                            src={financeTrackerHome} 
+                            alt="Finance Tracker Application"
                             className="img-fluid rounded-4 w-100"
                             style={{ 
                                 boxShadow: '0 4px 30px rgba(0, 70, 234, 0.4)',
@@ -79,10 +78,13 @@ const CheckIt = () => {
                     >
                         <Card.Body className="p-4 p-md-5">
                             <h2 className="text-white text-center mb-4 pb-3 border-bottom border-primary">
-                                What is CheckIt?
+                                What is FinanceTracker?
                             </h2>
+                            <p className="text-white fs-5 mb-4 lh-lg">
+                                FinanceTracker is a full-stack project built. The purpose of this application is to help users manage their personal finances effectively. Users can track their income, expenses, and savings, and get insights into their financial habits with the help of visual representations of that data.
+                            </p>
                             <p className="text-white fs-5 lh-lg">
-                                The CheckIt app is a project with a keen focus on Typescript, engineered to apply my Typescript skills from a beginner level. CheckIt is a to-do app that allows users to enter items to complete, to check them off or delete them, and they may also clear the whole list of tasks if need be.
+                                Managing personal finances is crucial for achieving financial stability, so I wanted to create a resource that is accessible and easy to use, a platform that I would also use myself.
                             </p>
                         </Card.Body>
                     </Card>
@@ -104,11 +106,19 @@ const CheckIt = () => {
                             <ul className="text-white fs-5 lh-lg" style={{ listStyleType: 'none', paddingLeft: 0 }}>
                                 <li className="mb-3">
                                     <span className="me-2">✓</span>
-                                    Designed a straightforward layout for the app to provide users the smoothest experience.
+                                    Fullstack budget app that allows users to enter their income and expenses in order to plan their budget appropriately.
                                 </li>
                                 <li className="mb-3">
                                     <span className="me-2">✓</span>
-                                    Created loading, saving and deleting functions in order to present users with their up-to-date list of tasks.
+                                    Simple UI and UX for seamless use and navigation.
+                                </li>
+                                <li className="mb-3">
+                                    <span className="me-2">✓</span>
+                                    Use of a database via Supabase for secure data storage and handling. 
+                                </li>
+                                <li className="mb-3">
+                                    <span className="me-2">✓</span>
+                                    User authentication required for secure access to website features. 
                                 </li>
                             </ul>
                         </Card.Body>
@@ -149,6 +159,24 @@ const CheckIt = () => {
                                         style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
                                     ></i>
                                 </Col>
+                                <Col xs={6} md={4}>
+                                    <i 
+                                        className="devicon-react-original-wordmark colored" 
+                                        style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
+                                    ></i>
+                                </Col>
+                                <Col xs={6} md={4}>
+                                    <i 
+                                        className="devicon-supabase-plain colored" 
+                                        style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
+                                    ></i>
+                                </Col>
+                                <Col xs={6} md={4}>
+                                    <i 
+                                        className="devicon-nodejs-plain-wordmark colored" 
+                                        style={{ fontSize: 'clamp(4rem, 8vw, 8rem)' }}
+                                    ></i>
+                                </Col>
                             </Row>
                         </Card.Body>
                     </Card>
@@ -171,4 +199,4 @@ const CheckIt = () => {
     )
 }
 
-export default CheckIt;
+export default FinanceTracker;

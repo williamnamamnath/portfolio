@@ -77,6 +77,21 @@ const Experience = () => {
                                         <div className="timeline-dot"></div>
                                         <div className="timeline-card">
                                             <div className="timeline-header">
+                                                <h3 className="mb-1 text-white">Cybersecurity Certificate</h3>
+                                                <span className="timeline-date">July 2026 – Present</span>
+                                            </div>
+                                            <p className="text-white timeline-institution">Coursera</p>
+                                            <hr className="timeline-divider" />
+                                            <div className="text-white timeline-body">
+                                                <p>Cybersecurity program covering network security, cryptography, ethical hacking, and risk management.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="timeline-item">
+                                        <div className="timeline-dot"></div>
+                                        <div className="timeline-card">
+                                            <div className="timeline-header">
                                                 <h3 className="mb-1 text-white">Web Development Certificate</h3>
                                                 <span className="timeline-date">October 2023 – May 2024</span>
                                             </div>
