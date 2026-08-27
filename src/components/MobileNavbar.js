@@ -20,12 +20,6 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
               <li>
                 <MobileNavLink to="/" onClick={toggleMenu}>Home</MobileNavLink>
               </li>
-              <li>
-                <MobileNavLink to="/experience" onClick={toggleMenu}>My Academic and Professional Experience</MobileNavLink>
-              </li>
-              <li>
-                <MobileNavAnchor href="/#projects" onClick={toggleMenu}>My Projects</MobileNavAnchor>
-              </li>
               <li style={{ marginTop: '1rem' }}>
                <SocialsDiv>
                 <SocialLogo href="https://github.com/williamnamamnath" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></SocialLogo>
@@ -73,22 +67,6 @@ const MobileNavLink = styled(NavLink)`
 
     &.active {
         color: #3672FF;
-    }
-`
-
-const MobileNavAnchor = styled.a`
-    display: block;
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.5rem 0;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: color 0.2s ease;
-
-    &:hover {
-        color: #ffffff;
     }
 `
 

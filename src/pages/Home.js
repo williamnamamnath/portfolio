@@ -9,6 +9,7 @@ import { MdEmail } from "react-icons/md";
 
 import backToTop from "../images/arrow-up.png";
 import picture from "../images/profile-picture.jpg";
+import wna from "../images/wna-picture.JPG";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../custom-styles.css';
@@ -103,10 +104,11 @@ const navigate = useNavigate();
 
       <section className="page-section">
         <div className="container">
-          <aside className="sidebar-card p-4 fade-up delay-3">
-            <h1>Hi There!</h1>
+          <aside className="sidebar-card p-4 p-md-5 text-center fade-up delay-3">
+            <img src={wna} alt="William Nam-Amnath" className="about-avatar mb-3" />
+            <h1 className="mt-3">Hi There!</h1>
             <div className="d-grid gap-3 mt-4">
-              <p>I am a full-stack web developer based in Montreal, Canada. I specialize in building responsive and user-friendly web applications with the MERN stack among other frameworks.
+              <p className="about-text mb-0">I am a full-stack web developer based in Montreal, Canada. I specialize in building responsive and user-friendly web applications with the MERN stack among other frameworks.
               </p>
             </div>
           </aside>

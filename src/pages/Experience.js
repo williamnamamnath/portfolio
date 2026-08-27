@@ -12,16 +12,16 @@ const Experience = () => {
 
     return (
         <>
-        <div style={{ margin: '6rem 0 0 0' }} />
-        <h1 className="text-center text-white mb-5" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+        <div className="exp-top-spacer" />
+        <h1 className="exp-heading text-center text-white mb-5" style={{ fontFamily: 'Open Sans, sans-serif' }}>
             My Academic and Professional Experience 
         </h1>
-        <Container className="pt-5">
+        <Container className="exp-container pt-5">
             
             <Tab.Container activeKey={key} onSelect={(k) => setKey(k)}>
                 <Row className="justify-content-center mb-2">
                     <Col lg={8} md={10}>
-                        <Nav variant="pills" className="justify-content-center gap-3">
+                        <Nav variant="pills" className="exp-nav justify-content-center gap-3">
                                     <Nav.Item>
                                         <Nav.Link 
                                             eventKey="education"
@@ -35,7 +35,7 @@ const Experience = () => {
                                     eventKey="experience"
                                     className={`exp-tab-link ${key === 'experience' ? 'exp-tab-link--active' : ''}`}
                                 >
-                                    💼 Professional Experience
+                                    💼 Experience
                                 </Nav.Link>
                             </Nav.Item>
                             
@@ -138,7 +138,21 @@ const Experience = () => {
                 }
             }
 
+            .exp-nav {
+                width: 100%;
+                flex-wrap: nowrap !important;
+            }
+            .exp-nav .nav-item {
+                flex: 1 1 0;
+                min-width: 0;
+            }
             .exp-tab-link {
+                display: block;
+                width: 100%;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 padding: 1rem 2.5rem;
                 border-radius: 50px;
                 background: transparent;
@@ -232,19 +246,94 @@ const Experience = () => {
                 margin-bottom: 0.5rem;
             }
 
+            .exp-top-spacer {
+                margin: 6rem 0 0 0;
+            }
+
+            .exp-container {
+                padding-left: 4rem !important;
+                padding-right: 4rem !important;
+            }
+
             @media (max-width: 768px) {
-                .container h1 {
+                .exp-container {
+                    padding-left: 3rem !important;
+                    padding-right: 3rem !important;
+                }
+                .exp-top-spacer {
+                    margin: 3rem 0 0 0;
+                }
+                .exp-heading {
                     font-size: 2.5rem !important;
+                }
+                .exp-container.pt-5 {
+                    padding-top: 2rem !important;
+                }
+                .exp-nav {
+                    gap: 0.5rem !important;
                 }
                 .exp-tab-link {
                     font-size: 1rem !important;
-                    padding: 0.8rem 1.5rem !important;
+                    padding: 0.8rem 1rem !important;
                 }
                 .timeline-card {
                     padding: 1.25rem 1rem !important;
                 }
                 .timeline-header {
                     flex-direction: column;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .exp-container {
+                    padding-left: 2rem !important;
+                    padding-right: 2rem !important;
+                }
+                .exp-top-spacer {
+                    margin: 2rem 0 0 0;
+                }
+                .exp-heading {
+                    font-size: 1.75rem !important;
+                    padding: 0 1rem;
+                }
+                .exp-tab-link {
+                    font-size: 0.8rem !important;
+                    padding: 0.65rem 0.5rem !important;
+                }
+                .timeline {
+                    padding: 1.5rem 0;
+                }
+                .timeline::before {
+                    left: 10px;
+                }
+                .timeline-item {
+                    padding-left: 2rem;
+                    margin-bottom: 1.75rem;
+                }
+                .timeline-dot {
+                    left: 1px;
+                    width: 16px;
+                    height: 16px;
+                }
+                .timeline-card {
+                    padding: 1rem 0.85rem !important;
+                    border-radius: 12px;
+                }
+                .timeline-header h3 {
+                    font-size: 1.15rem;
+                }
+                .timeline-date {
+                    font-size: 0.8rem;
+                }
+                .timeline-institution {
+                    font-size: 0.85rem;
+                }
+                .timeline-body {
+                    font-size: 0.9rem;
+                    line-height: 1.6;
+                }
+                .timeline-list {
+                    padding-left: 1rem;
                 }
             }
         `}</style>

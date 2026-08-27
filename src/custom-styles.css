@@ -434,6 +434,32 @@ body::before {
   margin: 0 auto;
 }
 
+.about-badge{
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--primary-1);
+  background: rgba(54,114,255,0.12);
+  border: 1px solid rgba(54,114,255,0.3);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+}
+
+.about-text{
+  opacity: 0.85;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-avatar{
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .cta-btn{
   display: inline-block;
   padding: .85rem 2rem;
@@ -458,6 +484,7 @@ body::before {
   .project-content{ padding: 1.25rem; }
   .project-tile{ min-height: 320px; }
   .project-thumb{ max-height: 120px; }
+  .project-title{ font-size: calc(clamp(2.5rem, 5vw, 3.8rem) * 1.5) !important; }
 }
 
 /* Make carousel slide transitions linear and constant-feel and add cross-fade */
@@ -542,7 +569,7 @@ body::before {
 /* Overlap: place carousel visually on top of the sidebar on larger screens */
 @media (min-width: 768px) {
   /* ensure vertical stacking keeps spacing on larger screens */
-  .sidebar-card{ margin-left: 0; padding-top: 1rem; }
+  .sidebar-card{ padding-top: 1rem; }
   .project-tile{ min-height: 420px; }
 }
 

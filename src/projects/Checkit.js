@@ -18,7 +18,7 @@ const CheckIt = () => {
             <Row className="mb-5">
                 <Col>
                     <h1 
-                        className="text-center text-white mb-4" 
+                        className="project-title text-center text-white mb-4" 
                         style={{ 
                             fontFamily: 'Open Sans, sans-serif',
                             fontSize: 'clamp(2.5rem, 5vw, 3.8rem)'
