@@ -83,7 +83,7 @@ const Experience = () => {
                                             <p className="text-white timeline-institution">Coursera</p>
                                             <hr className="timeline-divider" />
                                             <div className="text-white timeline-body">
-                                                <p>Cybersecurity program covering network security, cryptography, ethical hacking, and risk management.</p>
+                                                <p>Cybersecurity program covering network security, the importance of assets, threats and vulnerabilities how to detect and respond to threats and more.</p>
                                             </div>
                                         </div>
                                     </div>
